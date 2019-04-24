@@ -9,3 +9,8 @@
 > https://sourceforge.net/projects/opencvlibrary/files/opencv-ios/3.2.0/opencv-3.2.0-ios-framework.zip/download
 
 Framework下载后请移动到OpenCVDemo/OpenCV/目录下
+
+## 其他事项
+若想更换其他视频，请下载视频并导入。
+
+1. 视频不要过长，未做解析转本地处理，目前全部在内存中加载，所以视频过大很可能会造成OOM
