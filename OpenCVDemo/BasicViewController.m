@@ -7,10 +7,12 @@
 //
 
 #import "BasicViewController.h"
-#import "VideoViewController.h"
-#import "CameraViewController.h"
+#import "Video2CharViewController.h"
+#import "Camera2CharViewController.h"
 
 #import "StringFlowViewController.h"
+
+#import "Pic2SketchViewController.h"
 
 @interface BasicViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -55,15 +57,17 @@
         cell.textLabel.text = @"图像转字符串过程";
     } else if (indexPath.row == 1) {
         cell.textLabel.text = @"摄像头动画";
-    } else {
+    } else if (indexPath.row == 2) {
         cell.textLabel.text = @"视频动画";
+    } else {
+        cell.textLabel.text = @"图像转素描画过程";
     }
 
     return cell;
 }
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
+    return 4;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -76,9 +80,11 @@
 
         [self.navigationController pushViewController:vc animated:YES];
     } else if (indexPath.row == 1) {
-        [self.navigationController pushViewController:[CameraViewController new] animated:YES];
+        [self.navigationController pushViewController:[Camera2CharViewController new] animated:YES];
+    } else if (indexPath.row == 2) {
+        [self.navigationController pushViewController:[Video2CharViewController new] animated:YES];
     } else {
-        [self.navigationController pushViewController:[VideoViewController new] animated:YES];
+        [self.navigationController pushViewController:[Pic2SketchViewController new] animated:YES];
     }
 }
 

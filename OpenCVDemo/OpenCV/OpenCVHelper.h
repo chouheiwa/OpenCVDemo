@@ -43,6 +43,17 @@ typedef void(^ProcessBlock)(CGFloat percent);
 
 - (CVVideoModel *)processVideo:(NSString *)videoPath withSize:(SizeT)size processPercent:(nullable ProcessBlock)process;
 
+#pragma mark ---这个是素描画的相关函数---
+// 将给定图片进行高斯模糊
+- (UIImage *)gaussianblurImage:(UIImage *)image;
+// 将给定图片进行自适应二值化
+- (UIImage *)adaptiveThresholdImage:(UIImage *)image;
+// 给定图片进行普通二值化
+- (UIImage *)thresholdImage:(UIImage *)image;
+// 给定图片进行开运算
+- (UIImage *)morphologyImage:(UIImage *)image;
+// 通过cvMat直接获取图片
+- (UIImage *)getSketchImage:(cv::Mat)image;
 @end
 
 NS_ASSUME_NONNULL_END

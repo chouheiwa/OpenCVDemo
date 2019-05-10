@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "BasicViewController.h"
+#import "BaseRegister.h"
 @interface AppDelegate ()
 
 @end
@@ -16,7 +17,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
+    [BaseRegister start];
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
 
 //    self.window.rootViewController = [ViewController new];

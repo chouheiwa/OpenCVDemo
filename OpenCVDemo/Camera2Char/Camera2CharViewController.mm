@@ -9,11 +9,11 @@
 #import <opencv2/imgproc/types_c.h>
 #import <opencv2/imgcodecs/ios.h>
 #import <opencv2/videoio/cap_ios.h>
-#import "CameraViewController.h"
+#import "Camera2CharViewController.h"
 
 #import "OpenCVHelper.h"
 #import "CVAnimateStringModel.h"
-@interface CameraViewController () <CvVideoCameraDelegate>
+@interface Camera2CharViewController () <CvVideoCameraDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *label;
 
 @property (strong, nonatomic) CvVideoCamera *videoCamera;
@@ -21,7 +21,7 @@
 
 @end
 
-@implementation CameraViewController
+@implementation Camera2CharViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

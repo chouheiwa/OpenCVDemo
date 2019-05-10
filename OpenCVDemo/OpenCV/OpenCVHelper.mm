@@ -279,5 +279,124 @@
     return seconds * fps;
 }
 
+- (UIImage *)gaussianblurImage:(UIImage *)image {
+    cv::Mat cvImage;
+
+    UIImageToMat(image, cvImage);
+
+    cv::Mat blur;
+    cv::GaussianBlur(cvImage, blur, cv::Size(5, 5), 0);
+    cvImage.release();
+    UIImage *blurImage = MatToUIImage(blur);
+    blur.release();
+
+    return blurImage;
+}
+
+- (UIImage *)adaptiveThresholdImage:(UIImage *)image {
+    cv::Mat cvImage;
+
+    UIImageToMat(image, cvImage);
+
+    cv::Mat outImage;
+
+    cv::adaptiveThreshold(cvImage, outImage,
+                          255,
+                          cv::ADAPTIVE_THRESH_GAUSSIAN_C,
+                          cv::THRESH_BINARY,
+                          5,
+                          2);
+
+    cvImage.release();
+
+    UIImage *adaImage = MatToUIImage(outImage);
+
+    outImage.release();
+
+    return adaImage;
+}
+
+- (UIImage *)thresholdImage:(UIImage *)image {
+    cv::Mat cvImage;
+
+    UIImageToMat(image, cvImage);
+
+    cv::Mat outImage;
+    // 因为这时的图片已经比较干净且没什么阴影，所以选择普通二值化，灰度值 > 200 的就赋值为255(白色)
+    cv::threshold(cvImage, outImage, 200, 255, cv::THRESH_BINARY);
+
+    cvImage.release();
+
+    UIImage *threImage = MatToUIImage(outImage);
+
+    outImage.release();
+
+    return threImage;
+}
+
+- (UIImage *)morphologyImage:(UIImage *)image {
+    cv::Mat cvImage;
+
+    UIImageToMat(image, cvImage);
+    // 将图片取反，原黑变白，原白变黑
+    cv::bitwise_not(cvImage, cvImage);
+
+    cv::Mat outImage;
+    /// 获取一个3*3的核
+    cv::Mat ken = cv::getStructuringElement(cv::MORPH_RECT, cv::Size(3, 3));
+    /// 进行图像的开运算(开运算需要对有数值的地方进行缩小，所以我们需要将图片反色，即大部分有数值，而小部分没有，才能达到效果)
+    cv::morphologyEx(cvImage, outImage, cv::MORPH_OPEN, ken);
+
+    ken.release();
+
+    cvImage.release();
+
+    cv::bitwise_not(outImage, outImage);
+
+    UIImage *morphologyImage = MatToUIImage(outImage);
+
+    outImage.release();
+
+    return morphologyImage;
+}
+
+- (UIImage *)getSketchImage:(cv::Mat)image {
+    cv::Mat cvImage = image;
+    // 将图像转换为灰度显示
+    cv::cvtColor(cvImage,cvImage, CV_RGB2GRAY);
+    // 高斯模糊 这里就不新建变量了，直接复用原变量了
+    cv::GaussianBlur(cvImage, cvImage, cv::Size(5, 5), 0);
+    // 自适应
+    cv::adaptiveThreshold(cvImage, cvImage,
+                          255,
+                          cv::ADAPTIVE_THRESH_GAUSSIAN_C,
+                          cv::THRESH_BINARY,
+                          5,
+                          2);
+    // 二次高斯模糊
+    cv::GaussianBlur(cvImage, cvImage, cv::Size(5, 5), 0);
+    // 普通二值化
+    cv::threshold(cvImage, cvImage, 200, 255, cv::THRESH_BINARY);
+    // 进行开运算
+    // 取反
+    cv::bitwise_not(cvImage, cvImage);
+    // 取核
+    cv::Mat ken = cv::getStructuringElement(cv::MORPH_RECT, cv::Size(3, 3));
+    // 进行腐蚀
+    cv::morphologyEx(cvImage, cvImage, cv::MORPH_OPEN, ken);
+
+    ken.release();
+    // 取反
+    cv::bitwise_not(cvImage, cvImage);
+    // 三次高斯模糊
+    cv::GaussianBlur(cvImage, cvImage, cv::Size(5, 5), 0);
+
+    UIImage *images = MatToUIImage(cvImage);
+
+    cvImage.release();
+
+    return images;
+}
 
 @end
+

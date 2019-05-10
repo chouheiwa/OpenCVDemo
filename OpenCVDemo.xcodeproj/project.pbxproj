@@ -13,7 +13,7 @@
 		0244F3D52266C24500BA924F /* BasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0244F3D42266C24500BA924F /* BasicViewController.m */; };
 		026FBA542264952A008A98BE /* BadApple.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 026FBA532264952A008A98BE /* BadApple.mp4 */; };
 		0279F8362253402E00818F3F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0279F8352253402E00818F3F /* AppDelegate.m */; };
-		0279F8392253402E00818F3F /* CameraViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0279F8382253402E00818F3F /* CameraViewController.mm */; };
+		0279F8392253402E00818F3F /* Camera2CharViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0279F8382253402E00818F3F /* Camera2CharViewController.mm */; };
 		0279F83E2253402F00818F3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0279F83D2253402F00818F3F /* Assets.xcassets */; };
 		0279F8412253402F00818F3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0279F83F2253402F00818F3F /* LaunchScreen.storyboard */; };
 		0279F8442253402F00818F3F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0279F8432253402F00818F3F /* main.m */; };
@@ -21,10 +21,20 @@
 		0279F85622535E8800818F3F /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0279F85522535E8800818F3F /* CoreMedia.framework */; };
 		0279F85822535E9000818F3F /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0279F85722535E9000818F3F /* AssetsLibrary.framework */; };
 		0279F85922535EB100818F3F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0279F85122535DC600818F3F /* AVFoundation.framework */; };
-		0279F881225F1CE000818F3F /* VideoViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0279F87F225F1CE000818F3F /* VideoViewController.mm */; };
-		0279F882225F1CE000818F3F /* VideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0279F880225F1CE000818F3F /* VideoViewController.xib */; };
-		0279F885225F2E1700818F3F /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0279F884225F2E1700818F3F /* CameraViewController.xib */; };
+		0279F881225F1CE000818F3F /* Video2CharViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0279F87F225F1CE000818F3F /* Video2CharViewController.mm */; };
+		0279F882225F1CE000818F3F /* Video2CharViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0279F880225F1CE000818F3F /* Video2CharViewController.xib */; };
+		0279F885225F2E1700818F3F /* Camera2CharViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0279F884225F2E1700818F3F /* Camera2CharViewController.xib */; };
 		0279F88C225F364300818F3F /* OpenCVHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0279F88B225F364300818F3F /* OpenCVHelper.mm */; };
+		02C5AD022282835C00271E35 /* Pic2SketchFlowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02C5AD002282835C00271E35 /* Pic2SketchFlowViewController.m */; };
+		02C5AD032282835C00271E35 /* Pic2SketchFlowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02C5AD012282835C00271E35 /* Pic2SketchFlowViewController.xib */; };
+		02C5AD0C22829D4F00271E35 /* Pic2SketchModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 02C5AD0B22829D4F00271E35 /* Pic2SketchModel.mm */; };
+		02C5AD172282C72100271E35 /* cxk.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02C5AD162282C72100271E35 /* cxk.jpg */; };
+		02C5AD1C2282C84400271E35 /* Camera2SketchViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 02C5AD1A2282C84400271E35 /* Camera2SketchViewController.mm */; };
+		02C5AD1D2282C84400271E35 /* Camera2SketchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02C5AD1B2282C84400271E35 /* Camera2SketchViewController.xib */; };
+		02C5AD382283FF4B00271E35 /* BaseRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = 02C5AD372283FF4B00271E35 /* BaseRegister.m */; };
+		02C5AD3B2283FF8F00271E35 /* BaseAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 02C5AD3A2283FF8F00271E35 /* BaseAction.m */; };
+		02E93A29228443F600E77A24 /* BaseSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E93A28228443F600E77A24 /* BaseSection.m */; };
+		02ECED5922818A05003C4947 /* Pic2SketchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02ECED5722818A05003C4947 /* Pic2SketchViewController.m */; };
 		02F51E90226D536600C009CA /* StringFlowViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 02F51E8E226D536600C009CA /* StringFlowViewController.mm */; };
 		02F51E91226D536600C009CA /* StringFlowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02F51E8F226D536600C009CA /* StringFlowViewController.xib */; };
 		02F51E96226D57CB00C009CA /* Example.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02F51E95226D57CB00C009CA /* Example.jpg */; };
@@ -43,8 +53,8 @@
 		0279F8312253402E00818F3F /* OpenCVDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenCVDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0279F8342253402E00818F3F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0279F8352253402E00818F3F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0279F8372253402E00818F3F /* CameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
-		0279F8382253402E00818F3F /* CameraViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CameraViewController.mm; sourceTree = "<group>"; };
+		0279F8372253402E00818F3F /* Camera2CharViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Camera2CharViewController.h; sourceTree = "<group>"; };
+		0279F8382253402E00818F3F /* Camera2CharViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Camera2CharViewController.mm; sourceTree = "<group>"; };
 		0279F83D2253402F00818F3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0279F8402253402F00818F3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0279F8422253402F00818F3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,12 +64,31 @@
 		0279F85322535E7900818F3F /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		0279F85522535E8800818F3F /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		0279F85722535E9000818F3F /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
-		0279F87E225F1CE000818F3F /* VideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
-		0279F87F225F1CE000818F3F /* VideoViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = VideoViewController.mm; sourceTree = "<group>"; };
-		0279F880225F1CE000818F3F /* VideoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoViewController.xib; sourceTree = "<group>"; };
-		0279F884225F2E1700818F3F /* CameraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraViewController.xib; sourceTree = "<group>"; };
+		0279F87E225F1CE000818F3F /* Video2CharViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Video2CharViewController.h; sourceTree = "<group>"; };
+		0279F87F225F1CE000818F3F /* Video2CharViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Video2CharViewController.mm; sourceTree = "<group>"; };
+		0279F880225F1CE000818F3F /* Video2CharViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Video2CharViewController.xib; sourceTree = "<group>"; };
+		0279F884225F2E1700818F3F /* Camera2CharViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Camera2CharViewController.xib; sourceTree = "<group>"; };
 		0279F88A225F364300818F3F /* OpenCVHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCVHelper.h; sourceTree = "<group>"; };
 		0279F88B225F364300818F3F /* OpenCVHelper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVHelper.mm; sourceTree = "<group>"; };
+		02C5ACFF2282835C00271E35 /* Pic2SketchFlowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Pic2SketchFlowViewController.h; sourceTree = "<group>"; };
+		02C5AD002282835C00271E35 /* Pic2SketchFlowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Pic2SketchFlowViewController.m; sourceTree = "<group>"; };
+		02C5AD012282835C00271E35 /* Pic2SketchFlowViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Pic2SketchFlowViewController.xib; sourceTree = "<group>"; };
+		02C5AD0A22829D4F00271E35 /* Pic2SketchModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Pic2SketchModel.h; sourceTree = "<group>"; };
+		02C5AD0B22829D4F00271E35 /* Pic2SketchModel.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Pic2SketchModel.mm; sourceTree = "<group>"; };
+		02C5AD152282BCDE00271E35 /* Pic2SketchViewControllerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Pic2SketchViewControllerProtocol.h; sourceTree = "<group>"; };
+		02C5AD162282C72100271E35 /* cxk.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cxk.jpg; sourceTree = "<group>"; };
+		02C5AD192282C84400271E35 /* Camera2SketchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Camera2SketchViewController.h; sourceTree = "<group>"; };
+		02C5AD1A2282C84400271E35 /* Camera2SketchViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Camera2SketchViewController.mm; sourceTree = "<group>"; };
+		02C5AD1B2282C84400271E35 /* Camera2SketchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Camera2SketchViewController.xib; sourceTree = "<group>"; };
+		02C5AD362283FF4B00271E35 /* BaseRegister.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseRegister.h; sourceTree = "<group>"; };
+		02C5AD372283FF4B00271E35 /* BaseRegister.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseRegister.m; sourceTree = "<group>"; };
+		02C5AD392283FF8F00271E35 /* BaseAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseAction.h; sourceTree = "<group>"; };
+		02C5AD3A2283FF8F00271E35 /* BaseAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseAction.m; sourceTree = "<group>"; };
+		02C5AD3C2284026800271E35 /* BaseActionProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseActionProtocol.h; sourceTree = "<group>"; };
+		02E93A27228443F600E77A24 /* BaseSection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseSection.h; sourceTree = "<group>"; };
+		02E93A28228443F600E77A24 /* BaseSection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseSection.m; sourceTree = "<group>"; };
+		02ECED5622818A05003C4947 /* Pic2SketchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Pic2SketchViewController.h; sourceTree = "<group>"; };
+		02ECED5722818A05003C4947 /* Pic2SketchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Pic2SketchViewController.m; sourceTree = "<group>"; };
 		02F51E8D226D536600C009CA /* StringFlowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StringFlowViewController.h; sourceTree = "<group>"; };
 		02F51E8E226D536600C009CA /* StringFlowViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = StringFlowViewController.mm; sourceTree = "<group>"; };
 		02F51E8F226D536600C009CA /* StringFlowViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StringFlowViewController.xib; sourceTree = "<group>"; };
@@ -119,19 +148,18 @@
 		0279F8332253402E00818F3F /* OpenCVDemo */ = {
 			isa = PBXGroup;
 			children = (
-				02F51E92226D539A00C009CA /* AnimateFlow */,
+				02C5AD352283FEF200271E35 /* BaseRegister */,
+				02ECED5522818926003C4947 /* Pic2SketchFlow */,
+				02C5AD182282C7B000271E35 /* Camera2Sketch */,
+				02ECED54228188D7003C4947 /* Camera2Char */,
+				02ECED53228188B5003C4947 /* Video2Char */,
+				02F51E92226D539A00C009CA /* Pic2CharFlow */,
 				0244F3CB2265746E00BA924F /* OpenCV */,
 				026FBA532264952A008A98BE /* BadApple.mp4 */,
 				0279F8342253402E00818F3F /* AppDelegate.h */,
 				0279F8352253402E00818F3F /* AppDelegate.m */,
 				0244F3D32266C24500BA924F /* BasicViewController.h */,
 				0244F3D42266C24500BA924F /* BasicViewController.m */,
-				0279F87E225F1CE000818F3F /* VideoViewController.h */,
-				0279F87F225F1CE000818F3F /* VideoViewController.mm */,
-				0279F880225F1CE000818F3F /* VideoViewController.xib */,
-				0279F8372253402E00818F3F /* CameraViewController.h */,
-				0279F8382253402E00818F3F /* CameraViewController.mm */,
-				0279F884225F2E1700818F3F /* CameraViewController.xib */,
 				0279F83D2253402F00818F3F /* Assets.xcassets */,
 				0279F83F2253402F00818F3F /* LaunchScreen.storyboard */,
 				0279F8432253402F00818F3F /* main.m */,
@@ -151,7 +179,75 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		02F51E92226D539A00C009CA /* AnimateFlow */ = {
+		02C5AD0922829D3300271E35 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				02C5AD0A22829D4F00271E35 /* Pic2SketchModel.h */,
+				02C5AD0B22829D4F00271E35 /* Pic2SketchModel.mm */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		02C5AD182282C7B000271E35 /* Camera2Sketch */ = {
+			isa = PBXGroup;
+			children = (
+				02C5AD192282C84400271E35 /* Camera2SketchViewController.h */,
+				02C5AD1A2282C84400271E35 /* Camera2SketchViewController.mm */,
+				02C5AD1B2282C84400271E35 /* Camera2SketchViewController.xib */,
+			);
+			path = Camera2Sketch;
+			sourceTree = "<group>";
+		};
+		02C5AD352283FEF200271E35 /* BaseRegister */ = {
+			isa = PBXGroup;
+			children = (
+				02C5AD362283FF4B00271E35 /* BaseRegister.h */,
+				02C5AD372283FF4B00271E35 /* BaseRegister.m */,
+				02E93A27228443F600E77A24 /* BaseSection.h */,
+				02E93A28228443F600E77A24 /* BaseSection.m */,
+				02C5AD392283FF8F00271E35 /* BaseAction.h */,
+				02C5AD3A2283FF8F00271E35 /* BaseAction.m */,
+				02C5AD3C2284026800271E35 /* BaseActionProtocol.h */,
+			);
+			path = BaseRegister;
+			sourceTree = "<group>";
+		};
+		02ECED53228188B5003C4947 /* Video2Char */ = {
+			isa = PBXGroup;
+			children = (
+				0279F87E225F1CE000818F3F /* Video2CharViewController.h */,
+				0279F87F225F1CE000818F3F /* Video2CharViewController.mm */,
+				0279F880225F1CE000818F3F /* Video2CharViewController.xib */,
+			);
+			path = Video2Char;
+			sourceTree = "<group>";
+		};
+		02ECED54228188D7003C4947 /* Camera2Char */ = {
+			isa = PBXGroup;
+			children = (
+				0279F8372253402E00818F3F /* Camera2CharViewController.h */,
+				0279F8382253402E00818F3F /* Camera2CharViewController.mm */,
+				0279F884225F2E1700818F3F /* Camera2CharViewController.xib */,
+			);
+			path = Camera2Char;
+			sourceTree = "<group>";
+		};
+		02ECED5522818926003C4947 /* Pic2SketchFlow */ = {
+			isa = PBXGroup;
+			children = (
+				02C5AD162282C72100271E35 /* cxk.jpg */,
+				02C5AD0922829D3300271E35 /* Model */,
+				02ECED5622818A05003C4947 /* Pic2SketchViewController.h */,
+				02ECED5722818A05003C4947 /* Pic2SketchViewController.m */,
+				02C5AD152282BCDE00271E35 /* Pic2SketchViewControllerProtocol.h */,
+				02C5ACFF2282835C00271E35 /* Pic2SketchFlowViewController.h */,
+				02C5AD002282835C00271E35 /* Pic2SketchFlowViewController.m */,
+				02C5AD012282835C00271E35 /* Pic2SketchFlowViewController.xib */,
+			);
+			path = Pic2SketchFlow;
+			sourceTree = "<group>";
+		};
+		02F51E92226D539A00C009CA /* Pic2CharFlow */ = {
 			isa = PBXGroup;
 			children = (
 				02F51E95226D57CB00C009CA /* Example.jpg */,
@@ -162,7 +258,7 @@
 				02F51E98226D590400C009CA /* StringFinalStepViewController.mm */,
 				02F51E99226D590400C009CA /* StringFinalStepViewController.xib */,
 			);
-			path = AnimateFlow;
+			path = Pic2CharFlow;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,12 +318,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0279F885225F2E1700818F3F /* CameraViewController.xib in Resources */,
+				02C5AD172282C72100271E35 /* cxk.jpg in Resources */,
+				02C5AD032282835C00271E35 /* Pic2SketchFlowViewController.xib in Resources */,
+				0279F885225F2E1700818F3F /* Camera2CharViewController.xib in Resources */,
 				026FBA542264952A008A98BE /* BadApple.mp4 in Resources */,
+				02C5AD1D2282C84400271E35 /* Camera2SketchViewController.xib in Resources */,
 				0279F8412253402F00818F3F /* LaunchScreen.storyboard in Resources */,
 				0279F83E2253402F00818F3F /* Assets.xcassets in Resources */,
 				02F51E91226D536600C009CA /* StringFlowViewController.xib in Resources */,
-				0279F882225F1CE000818F3F /* VideoViewController.xib in Resources */,
+				0279F882225F1CE000818F3F /* Video2CharViewController.xib in Resources */,
 				02F51E9B226D590400C009CA /* StringFinalStepViewController.xib in Resources */,
 				02F51E96226D57CB00C009CA /* Example.jpg in Resources */,
 			);
@@ -240,15 +339,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0279F8392253402E00818F3F /* CameraViewController.mm in Sources */,
+				02C5AD3B2283FF8F00271E35 /* BaseAction.m in Sources */,
+				02E93A29228443F600E77A24 /* BaseSection.m in Sources */,
+				0279F8392253402E00818F3F /* Camera2CharViewController.mm in Sources */,
 				0244F3D52266C24500BA924F /* BasicViewController.m in Sources */,
+				02C5AD382283FF4B00271E35 /* BaseRegister.m in Sources */,
 				02F51E9A226D590400C009CA /* StringFinalStepViewController.mm in Sources */,
+				02ECED5922818A05003C4947 /* Pic2SketchViewController.m in Sources */,
 				0279F88C225F364300818F3F /* OpenCVHelper.mm in Sources */,
 				0244F3CE2265749D00BA924F /* CVAnimateStringModel.m in Sources */,
+				02C5AD1C2282C84400271E35 /* Camera2SketchViewController.mm in Sources */,
 				0279F8442253402F00818F3F /* main.m in Sources */,
 				0244F3D2226578B300BA924F /* CVVideoModel.m in Sources */,
+				02C5AD0C22829D4F00271E35 /* Pic2SketchModel.mm in Sources */,
+				02C5AD022282835C00271E35 /* Pic2SketchFlowViewController.m in Sources */,
 				02F51E90226D536600C009CA /* StringFlowViewController.mm in Sources */,
-				0279F881225F1CE000818F3F /* VideoViewController.mm in Sources */,
+				0279F881225F1CE000818F3F /* Video2CharViewController.mm in Sources */,
 				0279F8362253402E00818F3F /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

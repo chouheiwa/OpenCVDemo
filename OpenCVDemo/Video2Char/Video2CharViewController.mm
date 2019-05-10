@@ -6,11 +6,11 @@
 //  Copyright © 2019 chouheiwa. All rights reserved.
 //
 
-#import "VideoViewController.h"
+#import "Video2CharViewController.h"
 #import "OpenCVHelper.h"
 #import "CVAnimateStringModel.h"
 #import "CVVideoModel.h"
-@interface VideoViewController ()
+@interface Video2CharViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *imageLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
@@ -22,7 +22,7 @@
 
 @end
 
-@implementation VideoViewController
+@implementation Video2CharViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

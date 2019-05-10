@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VideoViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Video2CharViewController">
             <connections>
                 <outlet property="imageLabel" destination="iQN-ye-lSH" id="Cgm-pz-nlK"/>
                 <outlet property="imageView" destination="LBy-1f-JQg" id="diG-J7-P1w"/>
