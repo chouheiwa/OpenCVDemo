@@ -10,7 +10,10 @@
 #import "OpenCVHelper.h"
 #import "CVAnimateStringModel.h"
 #import "CVVideoModel.h"
-@interface Video2CharViewController ()
+
+#import "BaseActionProtocol.h"
+#import "BaseAction.h"
+@interface Video2CharViewController () <BaseActionProtocol>
 @property (weak, nonatomic) IBOutlet UILabel *imageLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
@@ -80,5 +83,22 @@
     });
 }
 
++ (nonnull BaseAction *)confirmAction {
+    BaseAction *action = [[BaseAction alloc] init];
+
+    action.title = @"视频转字符画";
+
+    action.index = 2;
+
+    action.section = 0;
+
+    action.sectionTitle = @"字符画";
+
+    action.jumpAction = ^(UINavigationController * _Nonnull navigationController) {
+        [navigationController pushViewController:[[self alloc] init] animated:YES];
+    };
+
+    return action;
+}
 
 @end

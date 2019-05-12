@@ -13,7 +13,11 @@
 
 #import "OpenCVHelper.h"
 #import "CVAnimateStringModel.h"
-@interface Camera2CharViewController () <CvVideoCameraDelegate>
+
+#import "BaseActionProtocol.h"
+#import "BaseAction.h"
+
+@interface Camera2CharViewController () <CvVideoCameraDelegate, BaseActionProtocol>
 @property (weak, nonatomic) IBOutlet UILabel *label;
 
 @property (strong, nonatomic) CvVideoCamera *videoCamera;
@@ -62,6 +66,24 @@
 
         self.label.text = [[OpenCVHelper shareInstance] getStringImageFromMat:image withSize:size].animateString;
     });
+}
+
++ (nonnull BaseAction *)confirmAction {
+    BaseAction *action = [[BaseAction alloc] init];
+
+    action.title = @"摄像头转字符画";
+
+    action.index = 1;
+
+    action.section = 0;
+
+    action.sectionTitle = @"字符画";
+
+    action.jumpAction = ^(UINavigationController * _Nonnull navigationController) {
+        [navigationController pushViewController:[[self alloc] init] animated:YES];
+    };
+
+    return action;
 }
 
 @end

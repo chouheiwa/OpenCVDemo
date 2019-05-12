@@ -9,8 +9,10 @@
 #import "Camera2SketchViewController.h"
 
 #import "OpenCVHelper.h"
+#import "BaseActionProtocol.h"
+#import "BaseAction.h"
 
-@interface Camera2SketchViewController () <CvVideoCameraDelegate>
+@interface Camera2SketchViewController () <CvVideoCameraDelegate, BaseActionProtocol>
 @property (weak, nonatomic) IBOutlet UIImageView *camerImageView;
 
 @property (nonatomic, strong) CvVideoCamera *videoCamera;
@@ -43,6 +45,24 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         self.camerImageView.image = [[OpenCVHelper shareInstance] getSketchImage:image];
     });
+}
+
++ (nonnull BaseAction *)confirmAction {
+    BaseAction *action = [[BaseAction alloc] init];
+
+    action.title = @"摄像头转素描画";
+
+    action.index = 1;
+
+    action.section = 1;
+
+    action.sectionTitle = @"素描画";
+
+    action.jumpAction = ^(UINavigationController * _Nonnull navigationController) {
+        [navigationController pushViewController:[[self alloc] init] animated:YES];
+    };
+
+    return action;
 }
 
 @end

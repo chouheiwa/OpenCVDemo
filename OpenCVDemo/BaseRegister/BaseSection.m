@@ -35,6 +35,12 @@
  @param action 操作对象
  */
 - (void)addAction:(BaseAction *)action {
+    if (_title.length == 0) {
+        _title = action.sectionTitle;
+    }
+
+    
+
     if (_detail.count == 0) {
         [_detail addObject:action];
         return;
@@ -44,17 +50,30 @@
     NSInteger end = _detail.count - 1;
 
     if (_detail[start].index >= action.index) {
-        [_detail i]
+        [_detail insertObject:action atIndex:start];
+        return;
+    }
+
+    if (_detail[end].index <= action.index) {
+        [_detail addObject:action];
+        return;
     }
 
     while (start < end) {
         NSInteger current = (start + end) / 2;
 
         if (_detail[current].index < action.index) {
-            start =
+            end = current;
+        } else {
+            start = current;
         }
     }
-    
+
+    if (_detail[start].index > action.index) {
+        [_detail insertObject:action atIndex:start];
+    } else {
+        [_detail insertObject:action atIndex:start + 1];
+    }
 }
 
 @end

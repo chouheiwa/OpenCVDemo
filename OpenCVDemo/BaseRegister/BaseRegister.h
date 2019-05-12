@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+@class BaseSection;
 NS_ASSUME_NONNULL_BEGIN
 
 /**
@@ -15,10 +15,19 @@ NS_ASSUME_NONNULL_BEGIN
 
  随着现有教程越来越多，每次都修改Controller的感觉并不好，同时跳转逻辑均在Controller中，体验也不好。所以修改
  */
+
+//NSObject *aObjc;
+
+extern NSObject *aObjc;
+static NSObject *bObjc;
+
 @interface BaseRegister : NSObject
+
+
 
 + (void)start;
 
++ (NSArray <BaseSection *>*)sections;
 
 @end
 

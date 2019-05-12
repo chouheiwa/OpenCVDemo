@@ -85,7 +85,7 @@
 + (nonnull BaseAction *)confirmAction {
     BaseAction *action = [[BaseAction alloc] init];
 
-    action.title = @"图像转素描画过程";
+    action.title = @"图片转素描画";
 
     action.index = 0;
 

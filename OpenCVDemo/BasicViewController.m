@@ -7,12 +7,9 @@
 //
 
 #import "BasicViewController.h"
-#import "Video2CharViewController.h"
-#import "Camera2CharViewController.h"
-
-#import "StringFlowViewController.h"
-
-#import "Pic2SketchViewController.h"
+#import "BaseAction.h"
+#import "BaseSection.h"
+#import "BaseRegister.h"
 
 @interface BasicViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -28,7 +25,7 @@
 
     self.title = @"功能列表";
 
-    _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:(UITableViewStylePlain)];
+    _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:(UITableViewStyleGrouped)];
 
     _tableView.dataSource = self;
     _tableView.delegate = self;
@@ -53,39 +50,23 @@
         cell = [[UITableViewCell alloc] initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:@"cell"];
     }
 
-    if (indexPath.row == 0) {
-        cell.textLabel.text = @"图像转字符串过程";
-    } else if (indexPath.row == 1) {
-        cell.textLabel.text = @"摄像头动画";
-    } else if (indexPath.row == 2) {
-        cell.textLabel.text = @"视频动画";
-    } else {
-        cell.textLabel.text = @"图像转素描画过程";
-    }
+    cell.textLabel.text = [BaseRegister sections][indexPath.section].datas[indexPath.row].title;
 
     return cell;
 }
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 4;
+    return [BaseRegister sections][section].datas.count;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return [BaseRegister sections].count;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
-    if (indexPath.row == 0) {
-        StringFlowViewController *vc = [StringFlowViewController new];
-
-        vc.showImage = [UIImage imageNamed:@"Example.jpg"];
-
-        [self.navigationController pushViewController:vc animated:YES];
-    } else if (indexPath.row == 1) {
-        [self.navigationController pushViewController:[Camera2CharViewController new] animated:YES];
-    } else if (indexPath.row == 2) {
-        [self.navigationController pushViewController:[Video2CharViewController new] animated:YES];
-    } else {
-        [self.navigationController pushViewController:[Pic2SketchViewController new] animated:YES];
-    }
+    [BaseRegister sections][indexPath.section].datas[indexPath.row].jumpAction(self.navigationController);
 }
 
 @end

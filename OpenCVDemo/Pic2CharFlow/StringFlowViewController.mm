@@ -11,8 +11,9 @@
 
 #import "OpenCVHelper.h"
 
-
-@interface StringFlowViewController ()
+#import "BaseActionProtocol.h"
+#import "BaseAction.h"
+@interface StringFlowViewController () <BaseActionProtocol>
 @property (weak, nonatomic) IBOutlet UILabel *stepLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *showImageVIew;
 @property (weak, nonatomic) IBOutlet UIButton *nextStepButton;
@@ -108,5 +109,23 @@
     // Pass the selected object to the new view controller.
 }
 */
++ (nonnull BaseAction *)confirmAction {
+    BaseAction *action = [[BaseAction alloc] init];
 
+    action.title = @"图片转字符画";
+
+    action.index = 0;
+
+    action.section = 0;
+
+    action.sectionTitle = @"字符画";
+
+    action.jumpAction = ^(UINavigationController * _Nonnull navigationController) {
+        StringFlowViewController *vc = [[self alloc] init];
+        vc.showImage = [UIImage imageNamed:@"Example.jpg"];
+        [navigationController pushViewController:vc animated:YES];
+    };
+
+    return action;
+}
 @end

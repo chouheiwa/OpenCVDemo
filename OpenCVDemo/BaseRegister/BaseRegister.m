@@ -53,8 +53,10 @@ static BaseRegister *instance = nil;
                     section = [[BaseSection alloc] init];
 
                     [dataArray addObject:section];
+
+                    section.index = action.section;
                 } else {
-                    for (int i = action.section; i <= 0; i --) {
+                    for (NSInteger i = action.section; i >= 0; i --) {
                         if (dataArray[i].index == action.section) {
                             section = dataArray[i];
                             break;
@@ -65,15 +67,23 @@ static BaseRegister *instance = nil;
                         section = [[BaseSection alloc] init];
 
                         [dataArray insertObject:section atIndex:action.section];
+
+                        section.index = action.section;
                     }
                 }
 
-                
+                [section addAction:action];
             }
         }
+
+        self.dataArray = dataArray;
         free(classList);
     }
     return self;
+}
+
++ (NSArray<BaseSection *> *)sections {
+    return instance.dataArray;
 }
 
 @end
