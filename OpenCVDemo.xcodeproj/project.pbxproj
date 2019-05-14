@@ -11,6 +11,7 @@
 		0244F3CF2265751B00BA924F /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0279F84A2253403800818F3F /* opencv2.framework */; };
 		0244F3D2226578B300BA924F /* CVVideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0244F3D1226578B300BA924F /* CVVideoModel.m */; };
 		0244F3D52266C24500BA924F /* BasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0244F3D42266C24500BA924F /* BasicViewController.m */; };
+		0258EA79228A4C500065AFE9 /* OpenCVDnn.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0258EA78228A4C500065AFE9 /* OpenCVDnn.mm */; };
 		026FBA542264952A008A98BE /* BadApple.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 026FBA532264952A008A98BE /* BadApple.mp4 */; };
 		0279F8362253402E00818F3F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0279F8352253402E00818F3F /* AppDelegate.m */; };
 		0279F8392253402E00818F3F /* Camera2CharViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0279F8382253402E00818F3F /* Camera2CharViewController.mm */; };
@@ -49,6 +50,8 @@
 		0244F3D1226578B300BA924F /* CVVideoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CVVideoModel.m; sourceTree = "<group>"; };
 		0244F3D32266C24500BA924F /* BasicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicViewController.h; sourceTree = "<group>"; };
 		0244F3D42266C24500BA924F /* BasicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicViewController.m; sourceTree = "<group>"; };
+		0258EA77228A4C500065AFE9 /* OpenCVDnn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCVDnn.h; sourceTree = "<group>"; };
+		0258EA78228A4C500065AFE9 /* OpenCVDnn.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVDnn.mm; sourceTree = "<group>"; };
 		026FBA532264952A008A98BE /* BadApple.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = BadApple.mp4; sourceTree = "<group>"; };
 		0279F8312253402E00818F3F /* OpenCVDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenCVDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0279F8342253402E00818F3F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -119,6 +122,8 @@
 			children = (
 				0279F88A225F364300818F3F /* OpenCVHelper.h */,
 				0279F88B225F364300818F3F /* OpenCVHelper.mm */,
+				0258EA77228A4C500065AFE9 /* OpenCVDnn.h */,
+				0258EA78228A4C500065AFE9 /* OpenCVDnn.mm */,
 				0279F84A2253403800818F3F /* opencv2.framework */,
 				0244F3CC2265749D00BA924F /* CVAnimateStringModel.h */,
 				0244F3CD2265749D00BA924F /* CVAnimateStringModel.m */,
@@ -340,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				02C5AD3B2283FF8F00271E35 /* BaseAction.m in Sources */,
+				0258EA79228A4C500065AFE9 /* OpenCVDnn.mm in Sources */,
 				02E93A29228443F600E77A24 /* BaseSection.m in Sources */,
 				0279F8392253402E00818F3F /* Camera2CharViewController.mm in Sources */,
 				0244F3D52266C24500BA924F /* BasicViewController.m in Sources */,
