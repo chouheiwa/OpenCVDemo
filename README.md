@@ -2,13 +2,28 @@
 这是一个关于OpenCV的demo，包含了视频转字符串动画，摄像头拍摄转字符串动画的相关流程
 
 ## 视频下载地址
+
+### Bad Apple
 > 链接:https://pan.baidu.com/s/1GjSzUKInWn2cMliWRsmiNg  密码:lojq
 
 视频下载后请直接移动OpenCVDemo目录下
+### CXK 打篮球
+> 链接:https://pan.baidu.com/s/1DvYt2y8Lr6p3xGDbHKUF4Q  密码:tuh2
+
+视频下载后请移动到OpenCVDemo/Sketch目录下
+
 ## Framework下载地址
 > https://sourceforge.net/projects/opencvlibrary/files/opencv-ios/3.2.0/opencv-3.2.0-ios-framework.zip/download
 
 Framework下载后请移动到OpenCVDemo/OpenCV/目录下
+
+## 功能
+### 支持功能
+- [x] 字符串动画
+- [x] 素描画(勾边画)
+### 未来预计加入功能
+- [ ] 加入训练模型导入教程
+
 
 ## 其他事项
 若想更换其他视频，请下载视频并导入。
