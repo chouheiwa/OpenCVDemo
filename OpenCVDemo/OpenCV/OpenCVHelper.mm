@@ -16,6 +16,8 @@
 #import "CVAnimateStringModel.h"
 #import "CVVideoModel.h"
 
+#import "CVSketchModel.h"
+
 @implementation OpenCVHelper
 
 + (instancetype)shareInstance {
@@ -396,6 +398,49 @@
     cvImage.release();
 
     return images;
+}
+
+- (CVSketchModel *)processSketchVideo:(NSString *)videoPath processPercent:(nullable ProcessBlock)process {
+    cv::VideoCapture cap;
+    cap.open(videoPath.UTF8String);
+
+    CVSketchModel *model;
+
+    if (cap.isOpened()) {
+        model = [[CVSketchModel alloc] init];
+        /// 获取视频总帧数(用以计算百分比)
+        NSInteger totalFrameCount = [OpenCVHelper getVideoFramesCountByVideoPath:videoPath];
+        /// 获取视频播放间隔(为了接下来播放字符串动画做准备)
+        NSTimeInterval timeDuration = [OpenCVHelper videoFrameDurationFromVideoPath:videoPath];
+
+        model.frameDuration = timeDuration;
+
+        NSMutableArray *array = [NSMutableArray arrayWithCapacity:20000];
+
+        cv::Mat frame;
+        while (1) {
+            cap>>frame;
+
+            if (frame.empty()) {
+                break;
+            }
+
+            [array addObject:[self getSketchImage:frame]];
+
+            if (process) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+
+                    process(array.count * 1.f / totalFrameCount);
+                });
+            }
+        }
+
+        model.animatedList = array;
+    }
+
+    cap.release();
+
+    return model;
 }
 
 @end

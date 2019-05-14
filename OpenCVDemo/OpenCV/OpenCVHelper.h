@@ -16,6 +16,7 @@ typedef struct{
 
 @class CVAnimateStringModel;
 @class CVVideoModel;
+@class CVSketchModel;
 
 namespace cv {
     class Mat;
@@ -54,6 +55,9 @@ typedef void(^ProcessBlock)(CGFloat percent);
 - (UIImage *)morphologyImage:(UIImage *)image;
 // 通过cvMat直接获取图片
 - (UIImage *)getSketchImage:(cv::Mat)image;
+
+- (CVSketchModel *)processSketchVideo:(NSString *)videoPath processPercent:(nullable ProcessBlock)process;
+
 @end
 
 NS_ASSUME_NONNULL_END
