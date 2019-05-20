@@ -7,10 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0236DA2E229250B8006D6A2A /* HandPaintHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0236DA2D229250B8006D6A2A /* HandPaintHelper.mm */; };
+		0236DA3322926E5F006D6A2A /* Pic2HandPrintViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0236DA3122926E5F006D6A2A /* Pic2HandPrintViewController.mm */; };
+		0236DA3422926E5F006D6A2A /* Pic2HandPrintViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0236DA3222926E5F006D6A2A /* Pic2HandPrintViewController.xib */; };
+		0236DA3622926F75006D6A2A /* handPaint.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0236DA3522926F74006D6A2A /* handPaint.jpg */; };
 		023E7605228AB81A002D0EB0 /* Video2SketchViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 023E7603228AB81A002D0EB0 /* Video2SketchViewController.mm */; };
 		023E7606228AB81A002D0EB0 /* Video2SketchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 023E7604228AB81A002D0EB0 /* Video2SketchViewController.xib */; };
 		023E7608228AB8E4002D0EB0 /* cxh.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 023E7607228AB8E4002D0EB0 /* cxh.mp4 */; };
 		023E760B228AB944002D0EB0 /* CVSketchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 023E760A228AB944002D0EB0 /* CVSketchModel.m */; };
+		023E7610228BBA84002D0EB0 /* MediaDispose.m in Sources */ = {isa = PBXBuildFile; fileRef = 023E760F228BBA84002D0EB0 /* MediaDispose.m */; };
+		023E7613228BBABD002D0EB0 /* UIImage+ToPixelBufferRef.m in Sources */ = {isa = PBXBuildFile; fileRef = 023E7612228BBABD002D0EB0 /* UIImage+ToPixelBufferRef.m */; };
 		0244F3CE2265749D00BA924F /* CVAnimateStringModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0244F3CD2265749D00BA924F /* CVAnimateStringModel.m */; };
 		0244F3CF2265751B00BA924F /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0279F84A2253403800818F3F /* opencv2.framework */; };
 		0244F3D2226578B300BA924F /* CVVideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0244F3D1226578B300BA924F /* CVVideoModel.m */; };
@@ -48,12 +54,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0236DA2C229250B8006D6A2A /* HandPaintHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HandPaintHelper.h; sourceTree = "<group>"; };
+		0236DA2D229250B8006D6A2A /* HandPaintHelper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = HandPaintHelper.mm; sourceTree = "<group>"; };
+		0236DA3022926E5F006D6A2A /* Pic2HandPrintViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Pic2HandPrintViewController.h; sourceTree = "<group>"; };
+		0236DA3122926E5F006D6A2A /* Pic2HandPrintViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Pic2HandPrintViewController.mm; sourceTree = "<group>"; };
+		0236DA3222926E5F006D6A2A /* Pic2HandPrintViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Pic2HandPrintViewController.xib; sourceTree = "<group>"; };
+		0236DA3522926F74006D6A2A /* handPaint.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = handPaint.jpg; sourceTree = "<group>"; };
 		023E7602228AB81A002D0EB0 /* Video2SketchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Video2SketchViewController.h; sourceTree = "<group>"; };
 		023E7603228AB81A002D0EB0 /* Video2SketchViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Video2SketchViewController.mm; sourceTree = "<group>"; };
 		023E7604228AB81A002D0EB0 /* Video2SketchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Video2SketchViewController.xib; sourceTree = "<group>"; };
 		023E7607228AB8E4002D0EB0 /* cxh.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = cxh.mp4; sourceTree = "<group>"; };
 		023E7609228AB944002D0EB0 /* CVSketchModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVSketchModel.h; sourceTree = "<group>"; };
 		023E760A228AB944002D0EB0 /* CVSketchModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CVSketchModel.m; sourceTree = "<group>"; };
+		023E760E228BBA84002D0EB0 /* MediaDispose.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MediaDispose.h; sourceTree = "<group>"; };
+		023E760F228BBA84002D0EB0 /* MediaDispose.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MediaDispose.m; sourceTree = "<group>"; };
+		023E7611228BBABD002D0EB0 /* UIImage+ToPixelBufferRef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+ToPixelBufferRef.h"; sourceTree = "<group>"; };
+		023E7612228BBABD002D0EB0 /* UIImage+ToPixelBufferRef.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ToPixelBufferRef.m"; sourceTree = "<group>"; };
 		0244F3CC2265749D00BA924F /* CVAnimateStringModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVAnimateStringModel.h; sourceTree = "<group>"; };
 		0244F3CD2265749D00BA924F /* CVAnimateStringModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CVAnimateStringModel.m; sourceTree = "<group>"; };
 		0244F3D0226578B300BA924F /* CVVideoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVVideoModel.h; sourceTree = "<group>"; };
@@ -127,6 +143,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0236DA2B2291A500006D6A2A /* HandPaint */ = {
+			isa = PBXGroup;
+			children = (
+				0236DA3522926F74006D6A2A /* handPaint.jpg */,
+				0236DA2F22926E1F006D6A2A /* Pic2HandPrint */,
+				0236DA2C229250B8006D6A2A /* HandPaintHelper.h */,
+				0236DA2D229250B8006D6A2A /* HandPaintHelper.mm */,
+			);
+			path = HandPaint;
+			sourceTree = "<group>";
+		};
+		0236DA2F22926E1F006D6A2A /* Pic2HandPrint */ = {
+			isa = PBXGroup;
+			children = (
+				0236DA3022926E5F006D6A2A /* Pic2HandPrintViewController.h */,
+				0236DA3122926E5F006D6A2A /* Pic2HandPrintViewController.mm */,
+				0236DA3222926E5F006D6A2A /* Pic2HandPrintViewController.xib */,
+			);
+			path = Pic2HandPrint;
+			sourceTree = "<group>";
+		};
 		023E75E8228AB21F002D0EB0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +200,17 @@
 				023E7604228AB81A002D0EB0 /* Video2SketchViewController.xib */,
 			);
 			path = Video2Sketch;
+			sourceTree = "<group>";
+		};
+		023E760D228BBA28002D0EB0 /* MediaDispose */ = {
+			isa = PBXGroup;
+			children = (
+				023E760E228BBA84002D0EB0 /* MediaDispose.h */,
+				023E760F228BBA84002D0EB0 /* MediaDispose.m */,
+				023E7611228BBABD002D0EB0 /* UIImage+ToPixelBufferRef.h */,
+				023E7612228BBABD002D0EB0 /* UIImage+ToPixelBufferRef.m */,
+			);
+			path = MediaDispose;
 			sourceTree = "<group>";
 		};
 		0244F3CB2265746E00BA924F /* OpenCV */ = {
@@ -204,9 +252,11 @@
 		0279F8332253402E00818F3F /* OpenCVDemo */ = {
 			isa = PBXGroup;
 			children = (
+				023E760D228BBA28002D0EB0 /* MediaDispose */,
 				02C5AD352283FEF200271E35 /* BaseRegister */,
 				023E7600228AB6A9002D0EB0 /* Char */,
 				023E75FF228AB695002D0EB0 /* Sketch */,
+				0236DA2B2291A500006D6A2A /* HandPaint */,
 				0244F3CB2265746E00BA924F /* OpenCV */,
 				026FBA532264952A008A98BE /* BadApple.mp4 */,
 				0279F8342253402E00818F3F /* AppDelegate.h */,
@@ -382,6 +432,8 @@
 				02F51E91226D536600C009CA /* StringFlowViewController.xib in Resources */,
 				0279F882225F1CE000818F3F /* Video2CharViewController.xib in Resources */,
 				023E7606228AB81A002D0EB0 /* Video2SketchViewController.xib in Resources */,
+				0236DA3422926E5F006D6A2A /* Pic2HandPrintViewController.xib in Resources */,
+				0236DA3622926F75006D6A2A /* handPaint.jpg in Resources */,
 				02F51E9B226D590400C009CA /* StringFinalStepViewController.xib in Resources */,
 				02F51E96226D57CB00C009CA /* Example.jpg in Resources */,
 			);
@@ -398,18 +450,22 @@
 				0258EA79228A4C500065AFE9 /* OpenCVDnn.mm in Sources */,
 				023E760B228AB944002D0EB0 /* CVSketchModel.m in Sources */,
 				02E93A29228443F600E77A24 /* BaseSection.m in Sources */,
+				0236DA2E229250B8006D6A2A /* HandPaintHelper.mm in Sources */,
 				0279F8392253402E00818F3F /* Camera2CharViewController.mm in Sources */,
 				0244F3D52266C24500BA924F /* BasicViewController.m in Sources */,
 				02C5AD382283FF4B00271E35 /* BaseRegister.m in Sources */,
+				023E7610228BBA84002D0EB0 /* MediaDispose.m in Sources */,
 				02F51E9A226D590400C009CA /* StringFinalStepViewController.mm in Sources */,
 				02ECED5922818A05003C4947 /* Pic2SketchViewController.m in Sources */,
 				0279F88C225F364300818F3F /* OpenCVHelper.mm in Sources */,
 				0244F3CE2265749D00BA924F /* CVAnimateStringModel.m in Sources */,
+				0236DA3322926E5F006D6A2A /* Pic2HandPrintViewController.mm in Sources */,
 				023E7605228AB81A002D0EB0 /* Video2SketchViewController.mm in Sources */,
 				02C5AD1C2282C84400271E35 /* Camera2SketchViewController.mm in Sources */,
 				0279F8442253402F00818F3F /* main.m in Sources */,
 				0244F3D2226578B300BA924F /* CVVideoModel.m in Sources */,
 				02C5AD0C22829D4F00271E35 /* Pic2SketchModel.mm in Sources */,
+				023E7613228BBABD002D0EB0 /* UIImage+ToPixelBufferRef.m in Sources */,
 				02C5AD022282835C00271E35 /* Pic2SketchFlowViewController.m in Sources */,
 				02F51E90226D536600C009CA /* StringFlowViewController.mm in Sources */,
 				0279F881225F1CE000818F3F /* Video2CharViewController.mm in Sources */,
