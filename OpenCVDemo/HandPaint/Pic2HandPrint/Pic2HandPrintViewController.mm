@@ -13,7 +13,7 @@
 #import "HandPaintHelper.h"
 #import "HandPaintSliderView.h"
 
-@interface Pic2HandPrintViewController ()<BaseActionProtocol>
+@interface Pic2HandPrintViewController ()<BaseActionProtocol, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *originImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *convertImageView;
@@ -21,6 +21,8 @@
 @property (weak, nonatomic) IBOutlet HandPaintSliderView *depthSliderView;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageHeightLayout;
+
+@property (nonatomic, strong) HandPaintHelper *helper;
 
 @end
 
@@ -31,9 +33,9 @@
 
     self.title = @"图片转手绘画";
     // Do any additional setup after loading the view from its nib.
-    HandPaintHelper *helper = [[HandPaintHelper alloc] init];
+    _helper = [[HandPaintHelper alloc] init];
 
-    self.originImageView.image = [UIImage imageNamed:@"handPaint.jpg"];
+    [self.originImageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(changeImage)]];
 
     self.depthSliderView.maxValue = 10;
 
@@ -46,12 +48,52 @@
     __weak typeof(self) weakSelf = self;
 
     self.depthSliderView.valueChangeBlock = ^(CGFloat value) {
-        weakSelf.convertImageView.image = [helper processImage:self.originImageView.image depth:value];
+        weakSelf.convertImageView.image = [weakSelf.helper processImage:self.originImageView.image depth:value];
     };
 
-    self.convertImageView.image = [helper processImage:self.originImageView.image depth:self.depthSliderView.value];
+    [self changeOriginImage:[UIImage imageNamed:@"handPaint.jpg"]];
+}
+
+- (void)changeOriginImage:(UIImage *)image {
+    self.originImageView.image = image;
+
+    self.convertImageView.image = [_helper processImage:self.originImageView.image depth:self.depthSliderView.value];
 
     [self resizeImageView];
+}
+
+- (void)changeImage {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"更换图片" message:@"请选择想要更换的图片类型" preferredStyle:(UIAlertControllerStyleActionSheet)];
+
+    [alert addAction:[UIAlertAction actionWithTitle:@"相册" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+        UIImagePickerController * picker = [[UIImagePickerController alloc] init];
+
+        picker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+        //设置代理
+        picker.delegate = self;
+        //打开相册
+        [self presentViewController:picker animated:YES completion:nil];
+    }]];
+
+
+    [alert addAction:[UIAlertAction actionWithTitle:@"内置图片" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+
+    }]];
+
+    [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:(UIAlertActionStyleCancel) handler:^(UIAlertAction * _Nonnull action) {
+
+    }]];
+
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
+    //获取图片
+    UIImage *image = info[UIImagePickerControllerOriginalImage];
+
+    [self changeOriginImage:image];
+
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)resizeImageView {
