@@ -11,6 +11,7 @@
 		0236DA3322926E5F006D6A2A /* Pic2HandPrintViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0236DA3122926E5F006D6A2A /* Pic2HandPrintViewController.mm */; };
 		0236DA3422926E5F006D6A2A /* Pic2HandPrintViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0236DA3222926E5F006D6A2A /* Pic2HandPrintViewController.xib */; };
 		0236DA3622926F75006D6A2A /* handPaint.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0236DA3522926F74006D6A2A /* handPaint.jpg */; };
+		0236DA3A22928EFB006D6A2A /* HandPaintSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0236DA3922928EFB006D6A2A /* HandPaintSliderView.m */; };
 		023E7605228AB81A002D0EB0 /* Video2SketchViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 023E7603228AB81A002D0EB0 /* Video2SketchViewController.mm */; };
 		023E7606228AB81A002D0EB0 /* Video2SketchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 023E7604228AB81A002D0EB0 /* Video2SketchViewController.xib */; };
 		023E7608228AB8E4002D0EB0 /* cxh.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 023E7607228AB8E4002D0EB0 /* cxh.mp4 */; };
@@ -60,6 +61,8 @@
 		0236DA3122926E5F006D6A2A /* Pic2HandPrintViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Pic2HandPrintViewController.mm; sourceTree = "<group>"; };
 		0236DA3222926E5F006D6A2A /* Pic2HandPrintViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Pic2HandPrintViewController.xib; sourceTree = "<group>"; };
 		0236DA3522926F74006D6A2A /* handPaint.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = handPaint.jpg; sourceTree = "<group>"; };
+		0236DA3822928EFB006D6A2A /* HandPaintSliderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HandPaintSliderView.h; sourceTree = "<group>"; };
+		0236DA3922928EFB006D6A2A /* HandPaintSliderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HandPaintSliderView.m; sourceTree = "<group>"; };
 		023E7602228AB81A002D0EB0 /* Video2SketchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Video2SketchViewController.h; sourceTree = "<group>"; };
 		023E7603228AB81A002D0EB0 /* Video2SketchViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Video2SketchViewController.mm; sourceTree = "<group>"; };
 		023E7604228AB81A002D0EB0 /* Video2SketchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Video2SketchViewController.xib; sourceTree = "<group>"; };
@@ -146,6 +149,7 @@
 		0236DA2B2291A500006D6A2A /* HandPaint */ = {
 			isa = PBXGroup;
 			children = (
+				0236DA3722928EB0006D6A2A /* View */,
 				0236DA3522926F74006D6A2A /* handPaint.jpg */,
 				0236DA2F22926E1F006D6A2A /* Pic2HandPrint */,
 				0236DA2C229250B8006D6A2A /* HandPaintHelper.h */,
@@ -162,6 +166,15 @@
 				0236DA3222926E5F006D6A2A /* Pic2HandPrintViewController.xib */,
 			);
 			path = Pic2HandPrint;
+			sourceTree = "<group>";
+		};
+		0236DA3722928EB0006D6A2A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0236DA3822928EFB006D6A2A /* HandPaintSliderView.h */,
+				0236DA3922928EFB006D6A2A /* HandPaintSliderView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		023E75E8228AB21F002D0EB0 /* Model */ = {
@@ -463,6 +476,7 @@
 				023E7605228AB81A002D0EB0 /* Video2SketchViewController.mm in Sources */,
 				02C5AD1C2282C84400271E35 /* Camera2SketchViewController.mm in Sources */,
 				0279F8442253402F00818F3F /* main.m in Sources */,
+				0236DA3A22928EFB006D6A2A /* HandPaintSliderView.m in Sources */,
 				0244F3D2226578B300BA924F /* CVVideoModel.m in Sources */,
 				02C5AD0C22829D4F00271E35 /* Pic2SketchModel.mm in Sources */,
 				023E7613228BBABD002D0EB0 /* UIImage+ToPixelBufferRef.m in Sources */,

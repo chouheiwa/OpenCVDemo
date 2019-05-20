@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HandPaintHelper : NSObject
 
-- (UIImage *)processImage:(UIImage *)image;
+- (UIImage *)processImage:(UIImage *)image depth:(double)depth;
 
 @end
 

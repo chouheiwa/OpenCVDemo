@@ -16,11 +16,11 @@ using namespace cv;
 using namespace std;
 @implementation HandPaintHelper
 
-- (UIImage *)processImage:(UIImage *)image {
+- (UIImage *)processImage:(UIImage *)image depth:(double)depth {
     Mat mat;
 
     UIImageToMat(image, mat);
-
+    // 转灰度图
     cvtColor(mat,mat,CV_RGB2GRAY);
 
     Mat Dx;
@@ -28,8 +28,6 @@ using namespace std;
 
     Mat Dy;
     Sobel(mat, Dy, CV_64F, 0, 1, 3);
-
-    double depth = 2.f;
 
     Dx = Dx * (depth / 100.f);
     Dy = Dy * (depth / 100.f);
@@ -47,8 +45,6 @@ using namespace std;
 
     result *= 255;
 
-//    cout<<result<<endl;
-
     double el = M_PI / 2.2;
     double az = M_PI / 4;
 
@@ -59,8 +55,6 @@ using namespace std;
     result = 255 * (x * dx + y * dy + z * dz);
 
     result.convertTo(result, CV_8U);
-
-//    cout<<result<<endl;
 
     UIImage *resultImage = MatToUIImage(result);
 
