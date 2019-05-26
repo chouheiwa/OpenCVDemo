@@ -16,9 +16,19 @@
 
 @property (nonatomic, strong) UITextField *textField;
 
+@property (nonatomic, strong) NSDecimalNumberHandler *handler;
+
 @end
 
 @implementation HandPaintSliderView
+
+- (NSDecimalNumberHandler *)handler {
+    if (!_handler) {
+        _handler = [[NSDecimalNumberHandler alloc] initWithRoundingMode:(NSRoundPlain) scale:_precision raiseOnExactness:NO raiseOnOverflow:NO raiseOnUnderflow:NO raiseOnDivideByZero:NO];
+    }
+
+    return _handler;
+}
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
@@ -82,7 +92,9 @@
 
     self.slider.value = value;
 
-    self.textField.text = [NSString stringWithFormat:@"%.1f", value];
+    NSDecimalNumber *number = [[NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%f", value]] decimalNumberByRoundingAccordingToBehavior:self.handler];
+
+    self.textField.text = number.stringValue;
 }
 
 - (void)setMinValue:(CGFloat)minValue {
@@ -106,20 +118,26 @@
         num = self.minValue;
     }
 
-    textField.text = [NSString stringWithFormat:@"%.1f", num];
+    NSDecimalNumber *number = [[NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%f", num]] decimalNumberByRoundingAccordingToBehavior:self.handler];
+
+    textField.text = number.stringValue;
 
     if (self.valueChangeBlock) {
-        self.valueChangeBlock([textField.text doubleValue]);
+        self.valueChangeBlock(number.doubleValue);
     }
 }
 
 - (void)sliderDidSlide {
     CGFloat value = _slider.value;
 
-    _textField.text = [NSString stringWithFormat:@"%.1f", value];
+    NSDecimalNumber *number = [[NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%f", value]] decimalNumberByRoundingAccordingToBehavior:self.handler];
+
+    _textField.text = number.stringValue;
+
+    self.value = number.doubleValue;
 
     if (self.valueChangeBlock) {
-        self.valueChangeBlock([_textField.text doubleValue]);
+        self.valueChangeBlock(number.doubleValue);
     }
 }
 

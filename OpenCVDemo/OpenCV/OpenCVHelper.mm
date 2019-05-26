@@ -366,8 +366,11 @@
     cv::Mat cvImage = image;
     // 将图像转换为灰度显示
     cv::cvtColor(cvImage,cvImage, CV_RGB2GRAY);
+
+    cv::Size size(5, 5);
+
     // 高斯模糊 这里就不新建变量了，直接复用原变量了
-    cv::GaussianBlur(cvImage, cvImage, cv::Size(5, 5), 0);
+    cv::GaussianBlur(cvImage, cvImage, size, 0);
     // 自适应
     cv::adaptiveThreshold(cvImage, cvImage,
                           255,
@@ -376,7 +379,7 @@
                           5,
                           2);
     // 二次高斯模糊
-    cv::GaussianBlur(cvImage, cvImage, cv::Size(5, 5), 0);
+    cv::GaussianBlur(cvImage, cvImage, size, 0);
     // 普通二值化
     cv::threshold(cvImage, cvImage, 200, 255, cv::THRESH_BINARY);
     // 进行开运算
@@ -391,7 +394,7 @@
     // 取反
     cv::bitwise_not(cvImage, cvImage);
     // 三次高斯模糊
-    cv::GaussianBlur(cvImage, cvImage, cv::Size(5, 5), 0);
+    cv::GaussianBlur(cvImage, cvImage, size, 0);
 
     UIImage *images = MatToUIImage(cvImage);
 

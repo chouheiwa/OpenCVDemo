@@ -14,45 +14,82 @@
 #import "HandPaintHelper.h"
 using namespace cv;
 using namespace std;
+
+@interface HandPaintHelper ()
+
+{
+    Mat _depthX;
+    Mat _depthY;
+    Mat _depthZ;
+}
+
+@property (nonatomic, assign) double depth;
+
+@property (nonatomic, strong) UIImage *originImage;
+
+@end
+
 @implementation HandPaintHelper
 
-- (UIImage *)processImage:(UIImage *)image depth:(double)depth {
-    Mat mat;
+- (void)dealloc {
+    _depthX.release();
+    _depthY.release();
+    _depthZ.release();
+}
 
-    UIImageToMat(image, mat);
-    // 转灰度图
-    cvtColor(mat,mat,CV_RGB2GRAY);
+- (UIImage *)processImage:(UIImage *)image depth:(double)depth elevation:(double)elevation azimuth:(double)azimuth {
 
-    Mat Dx;
-    Sobel(mat, Dx, CV_64F, 1, 0, 3);
+    do {
+        do {
+            if (_originImage == image) break;
 
-    Mat Dy;
-    Sobel(mat, Dy, CV_64F, 0, 1, 3);
+            _originImage = image;
+        } while (NO);
+        // double 可能存在误差
+        if (fabs(_depth - depth) < 0.000001) break;
 
-    Dx = Dx * (depth / 100.f);
-    Dy = Dy * (depth / 100.f);
+        _depth = depth;
 
-    Mat dx = Dx.mul(Dx);
-    Mat dy = Dy.mul(Dy);
+        Mat mat;
 
-    Mat result;
+        UIImageToMat(image, mat);
+        // 转灰度图
+        cvtColor(mat,mat,CV_RGB2GRAY);
 
-    sqrt(dx + dy + 1.f, result);
+        Mat gradientX;
+        Mat gradientY;
 
-    dx = Dx / result;
-    dy = Dy / result;
-    Mat dz = 1.f / result;
+        Sobel(mat, gradientX, CV_64F, 1, 0, 3);
 
-    result *= 255;
+        Sobel(mat, gradientY, CV_64F, 0, 1, 3);
 
-    double el = M_PI / 2.2;
-    double az = M_PI / 4;
+        gradientX = gradientX * (depth / 100.f);
+        gradientY = gradientY * (depth / 100.f);
+
+        Mat result;
+
+        sqrt(gradientX.mul(gradientX) + gradientY.mul(gradientY) + 1.f, result);
+
+        _depthX = gradientX / result;
+        _depthY  = gradientY / result;
+        _depthZ = 1.f / result;
+
+        mat.release();
+        result.release();
+        gradientX.release();
+        gradientY.release();
+    } while (NO);
+
+
+
+    double el = M_PI * elevation;
+    double az = M_PI * azimuth;
 
     double x = cos(el) * cos(az);
     double y = cos(el) * sin(az);
     double z = sin(el);
 
-    result = 255 * (x * dx + y * dy + z * dz);
+    Mat result = 255 * (x * _depthX + y * _depthY + z * _depthZ);
 
     result.convertTo(result, CV_8U);
 

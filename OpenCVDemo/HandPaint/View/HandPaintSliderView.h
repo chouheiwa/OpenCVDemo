@@ -20,6 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign) CGFloat value;
 
+@property (nonatomic, assign) short precision;
+
 @property (nonatomic, copy) void (^valueChangeBlock) (CGFloat value);
 
 @end

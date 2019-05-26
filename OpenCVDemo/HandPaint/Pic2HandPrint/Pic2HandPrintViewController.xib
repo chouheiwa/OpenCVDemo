@@ -12,6 +12,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Pic2HandPrintViewController">
             <connections>
+                <outlet property="AZSliderView" destination="vlK-LV-gLV" id="t3y-tp-RqO"/>
+                <outlet property="ELSliderView" destination="e5b-J0-ij0" id="bUr-R5-U8N"/>
                 <outlet property="convertImageView" destination="vgk-QR-T2w" id="ak4-gy-6bA"/>
                 <outlet property="depthSliderView" destination="jrA-WS-ORP" id="GY5-z8-TGp"/>
                 <outlet property="imageHeightLayout" destination="AqF-5x-zoy" id="RGM-VH-M3e"/>
@@ -67,7 +69,7 @@
                             </constraints>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wvF-e8-qGt">
-                            <rect key="frame" x="16" y="600" width="382" height="70.5"/>
+                            <rect key="frame" x="16" y="600" width="382" height="290.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="控制板" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJB-Zo-39q">
                                     <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
@@ -77,6 +79,12 @@
                                 </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="jrA-WS-ORP" customClass="HandPaintSliderView">
                                     <rect key="frame" x="0.0" y="20.5" width="382" height="50"/>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="e5b-J0-ij0" customClass="HandPaintSliderView">
+                                    <rect key="frame" x="0.0" y="70.5" width="382" height="110"/>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="vlK-LV-gLV" customClass="HandPaintSliderView">
+                                    <rect key="frame" x="0.0" y="180.5" width="382" height="110"/>
                                 </stackView>
                             </subviews>
                         </stackView>

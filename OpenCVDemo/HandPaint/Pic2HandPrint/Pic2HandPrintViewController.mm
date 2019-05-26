@@ -19,6 +19,9 @@
 @property (weak, nonatomic) IBOutlet UIImageView *convertImageView;
 
 @property (weak, nonatomic) IBOutlet HandPaintSliderView *depthSliderView;
+@property (weak, nonatomic) IBOutlet HandPaintSliderView *ELSliderView;
+
+@property (weak, nonatomic) IBOutlet HandPaintSliderView *AZSliderView;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageHeightLayout;
 
@@ -37,27 +40,47 @@
 
     [self.originImageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(changeImage)]];
 
-    self.depthSliderView.maxValue = 10;
-
-    self.depthSliderView.minValue = 0.1;
-
-    self.depthSliderView.value = 3;
-
-    self.depthSliderView.title = @"景深";
-
     __weak typeof(self) weakSelf = self;
 
-    self.depthSliderView.valueChangeBlock = ^(CGFloat value) {
-        weakSelf.convertImageView.image = [weakSelf.helper processImage:self.originImageView.image depth:value];
-    };
+    [self setupSliderView:self.depthSliderView maxValue:10 minValue:0.1 currentValue:3 precision:1 title:@"景深" changeBlock:^(CGFloat value) {
+        __strong typeof(weakSelf) self = weakSelf;
+
+        self.convertImageView.image = [self.helper processImage:self.originImageView.image depth:value elevation:self.ELSliderView.value azimuth:self.AZSliderView.value];
+    }];
+
+    [self setupSliderView:self.ELSliderView maxValue:1.5 minValue:-0.5 currentValue:0.45 precision:2 title:@"光源仰角" changeBlock:^(CGFloat value) {
+        __strong typeof(weakSelf) self = weakSelf;
+
+        self.convertImageView.image = [self.helper processImage:self.originImageView.image depth:self.depthSliderView.value elevation:value azimuth:self.AZSliderView.value];
+    }];
+
+    [self setupSliderView:self.AZSliderView maxValue:2 minValue:0 currentValue:0.25 precision:2 title:@"光源倾角" changeBlock:^(CGFloat value) {
+        __strong typeof(weakSelf) self = weakSelf;
+
+        self.convertImageView.image = [self.helper processImage:self.originImageView.image depth:self.depthSliderView.value elevation:value azimuth:self.AZSliderView.value];
+    }];
 
     [self changeOriginImage:[UIImage imageNamed:@"handPaint.jpg"]];
+}
+
+- (void)setupSliderView:(HandPaintSliderView *)view maxValue:(CGFloat)maxValue minValue:(CGFloat)minValue currentValue:(CGFloat)currentValue precision:(short)precision title:(NSString *)title changeBlock:(void(^)(CGFloat value))block {
+    view.precision = precision;
+
+    view.maxValue = maxValue;
+
+    view.minValue = minValue;
+
+    view.value = currentValue;
+
+    view.title = title;
+
+    view.valueChangeBlock = block;
 }
 
 - (void)changeOriginImage:(UIImage *)image {
     self.originImageView.image = image;
 
-    self.convertImageView.image = [_helper processImage:self.originImageView.image depth:self.depthSliderView.value];
+    self.convertImageView.image = [_helper processImage:self.originImageView.image depth:self.depthSliderView.value elevation:self.ELSliderView.value azimuth:self.AZSliderView.value];
 
     [self resizeImageView];
 }
@@ -107,16 +130,6 @@
 
     self.imageHeightLayout.constant = height;
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 + (nonnull BaseAction *)confirmAction {
     BaseAction *action = [[BaseAction alloc] init];
