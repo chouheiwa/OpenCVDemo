@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "BaseActionProtocol.h"
 typedef NS_ENUM(NSUInteger, FlowStep) {
     FlowStepFirst = 0, // 显示原图
     FlowStepSecond, // 将原图压缩成指定大小缩略图
@@ -16,7 +16,7 @@ typedef NS_ENUM(NSUInteger, FlowStep) {
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface StringFlowViewController : UIViewController
+@interface StringFlowViewController : UIViewController <BaseActionProtocol>
 
 @property (nonatomic, assign) FlowStep step;
 // 上一步展示的图片

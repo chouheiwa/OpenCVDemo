@@ -8,12 +8,11 @@
 
 #import "Video2SketchViewController.h"
 #import "BaseAction.h"
-#import "BaseActionProtocol.h"
 
 #import "OpenCVHelper.h"
 #import "CVSketchModel.h"
 
-@interface Video2SketchViewController () <BaseActionProtocol>
+@interface Video2SketchViewController () 
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *detailLabel;
@@ -88,8 +87,6 @@
     action.index = 2;
 
     action.section = 1;
-
-    action.sectionTitle = @"素描画";
 
     action.jumpAction = ^(UINavigationController * _Nonnull navigationController) {
         [navigationController pushViewController:[[self alloc] init] animated:YES];

@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "BaseActionProtocol.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Camera2SketchViewController : UIViewController
+@interface Camera2SketchViewController : UIViewController <BaseActionProtocol>
 
 @end
 

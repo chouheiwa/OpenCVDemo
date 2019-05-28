@@ -14,10 +14,9 @@
 #import "OpenCVHelper.h"
 #import "CVAnimateStringModel.h"
 
-#import "BaseActionProtocol.h"
 #import "BaseAction.h"
 
-@interface Camera2CharViewController () <CvVideoCameraDelegate, BaseActionProtocol>
+@interface Camera2CharViewController () <CvVideoCameraDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *label;
 
 @property (strong, nonatomic) CvVideoCamera *videoCamera;
@@ -76,8 +75,6 @@
     action.index = 1;
 
     action.section = 0;
-
-    action.sectionTitle = @"字符画";
 
     action.jumpAction = ^(UINavigationController * _Nonnull navigationController) {
         [navigationController pushViewController:[[self alloc] init] animated:YES];

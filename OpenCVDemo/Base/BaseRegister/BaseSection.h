@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy) NSString *title;
 
+@property (nonatomic, copy) NSString *details;
+
 @property (nonatomic, assign) NSInteger index;
 
 @property (nonatomic, copy, readonly) NSArray <BaseAction *>*datas;

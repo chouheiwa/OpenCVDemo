@@ -35,12 +35,6 @@
  @param action 操作对象
  */
 - (void)addAction:(BaseAction *)action {
-    if (_title.length == 0) {
-        _title = action.sectionTitle;
-    }
-
-    
-
     if (_detail.count == 0) {
         [_detail addObject:action];
         return;

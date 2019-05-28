@@ -28,10 +28,9 @@ typedef void(^JumpBlock)(UINavigationController *navigationController);
  */
 @property (nonatomic, copy) NSString *title;
 /**
- 组标题
+ 内容
  */
-@property (nonatomic, copy) NSString *sectionTitle;
-
+@property (nonatomic, copy) NSString *detail;
 /**
  跳转回调
  */

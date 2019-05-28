@@ -9,10 +9,9 @@
 #import "Camera2SketchViewController.h"
 
 #import "OpenCVHelper.h"
-#import "BaseActionProtocol.h"
 #import "BaseAction.h"
 
-@interface Camera2SketchViewController () <CvVideoCameraDelegate, BaseActionProtocol>
+@interface Camera2SketchViewController () <CvVideoCameraDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *camerImageView;
 
 @property (nonatomic, strong) CvVideoCamera *videoCamera;
@@ -55,8 +54,6 @@
     action.index = 1;
 
     action.section = 1;
-
-    action.sectionTitle = @"素描画";
 
     action.jumpAction = ^(UINavigationController * _Nonnull navigationController) {
         [navigationController pushViewController:[[self alloc] init] animated:YES];

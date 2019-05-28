@@ -8,12 +8,11 @@
 
 #import "Pic2HandPrintViewController.h"
 #import "BaseAction.h"
-#import "BaseActionProtocol.h"
 
 #import "HandPaintHelper.h"
 #import "HandPaintSliderView.h"
 
-@interface Pic2HandPrintViewController ()<BaseActionProtocol, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface Pic2HandPrintViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *originImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *convertImageView;
@@ -136,11 +135,11 @@
 
     action.title = @"图片转手绘画";
 
+    action.detail = @"这个功能是将图片转换成具有手绘感觉的效果图片。\n对于整体构图比较空旷的风景效果较好，人物等效果很差";
+
     action.index = 0;
 
     action.section = 2;
-
-    action.sectionTitle = @"手绘画";
 
     action.jumpAction = ^(UINavigationController * _Nonnull navigationController) {
         [navigationController pushViewController:[[self alloc] init] animated:YES];

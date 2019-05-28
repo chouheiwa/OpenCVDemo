@@ -287,6 +287,7 @@
     UIImageToMat(image, cvImage);
 
     cv::Mat blur;
+    // 选取一个5 * 5 的核用于模糊
     cv::GaussianBlur(cvImage, blur, cv::Size(5, 5), 0);
     cvImage.release();
     UIImage *blurImage = MatToUIImage(blur);
@@ -304,8 +305,8 @@
 
     cv::adaptiveThreshold(cvImage, outImage,
                           255,
-                          cv::ADAPTIVE_THRESH_GAUSSIAN_C,
-                          cv::THRESH_BINARY,
+                          cv::ADAPTIVE_THRESH_GAUSSIAN_C, // 这里我们采用的是高斯自适应模糊
+                          cv::THRESH_BINARY, // 二值化
                           5,
                           2);
 

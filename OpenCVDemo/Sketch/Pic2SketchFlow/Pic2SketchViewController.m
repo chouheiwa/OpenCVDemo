@@ -55,16 +55,6 @@
     [self.view addSubview:controller.view];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 - (nullable UIViewController *)pageViewController:(nonnull UIPageViewController *)pageViewController viewControllerAfterViewController:(nonnull UIViewController <Pic2SketchViewControllerProtocol>*)viewController {
     if (viewController.index == self.array.count - 1) {
         return nil;
@@ -90,8 +80,6 @@
     action.index = 0;
 
     action.section = 1;
-
-    action.sectionTitle = @"素描画";
 
     action.jumpAction = ^(UINavigationController * _Nonnull navigationController) {
         [navigationController pushViewController:[[Pic2SketchViewController alloc] init] animated:YES];

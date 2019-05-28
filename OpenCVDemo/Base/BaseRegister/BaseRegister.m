@@ -11,6 +11,7 @@
 #import "BaseAction.h"
 #import "BaseActionProtocol.h"
 #import "BaseSection.h"
+#import "BaseSectionProtocol.h"
 
 @interface BaseRegister ()
 
@@ -29,7 +30,7 @@ static BaseRegister *instance = nil;
 
 - (instancetype)init {
     if (self = [super init]) {
-        Protocol *protocol = @protocol(BaseActionProtocol);
+        Protocol *protocol = @protocol(BaseSectionProtocol);
 
         int numberOfClasses = objc_getClassList(NULL, 0);
         Class *classList = (__unsafe_unretained Class *)malloc(numberOfClasses * sizeof(Class));
@@ -45,36 +46,15 @@ static BaseRegister *instance = nil;
 
             if (resultConfirmProtocol)
             {
-                BaseAction *action = [class performSelector:@selector(confirmAction)];
+                BaseSection *section = [class performSelector:@selector(confirmSection)];
 
-                BaseSection *section;
-
-                if (action.section >= dataArray.count) {
-                    section = [[BaseSection alloc] init];
-
-                    [dataArray addObject:section];
-
-                    section.index = action.section;
-                } else {
-                    for (NSInteger i = action.section; i >= 0; i --) {
-                        if (dataArray[i].index == action.section) {
-                            section = dataArray[i];
-                            break;
-                        }
-                    }
-
-                    if (!section) {
-                        section = [[BaseSection alloc] init];
-
-                        [dataArray insertObject:section atIndex:action.section];
-
-                        section.index = action.section;
-                    }
-                }
-
-                [section addAction:action];
+                [dataArray addObject:section];
             }
         }
+
+        [dataArray sortUsingComparator:^NSComparisonResult(BaseSection * _Nonnull obj1, BaseSection * _Nonnull obj2) {
+            return obj1.index > obj2.index;
+        }];
 
         self.dataArray = dataArray;
         free(classList);

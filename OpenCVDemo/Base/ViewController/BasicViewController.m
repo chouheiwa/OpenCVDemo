@@ -11,6 +11,8 @@
 #import "BaseSection.h"
 #import "BaseRegister.h"
 
+#import "BaseTableViewCell.h"
+
 @interface BasicViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
@@ -30,6 +32,8 @@
     _tableView.dataSource = self;
     _tableView.delegate = self;
 
+    [_tableView registerNib:[UINib nibWithNibName:@"BaseTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
+
     [self.view addSubview:_tableView];
 }
 
@@ -44,13 +48,9 @@
 */
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    BaseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
 
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:@"cell"];
-    }
-
-    cell.textLabel.text = [BaseRegister sections][indexPath.section].datas[indexPath.row].title;
+    cell.model = [BaseRegister sections][indexPath.section].datas[indexPath.row];
 
     return cell;
 }

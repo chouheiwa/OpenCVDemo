@@ -6,8 +6,8 @@
 //  Copyright © 2019 chouheiwa. All rights reserved.
 //
 #import <UIKit/UIKit.h>
-
-@interface Camera2CharViewController : UIViewController
+#import "BaseActionProtocol.h"
+@interface Camera2CharViewController : UIViewController <BaseActionProtocol>
 
 
 @end
