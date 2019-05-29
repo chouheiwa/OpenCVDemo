@@ -69,4 +69,18 @@
     [BaseRegister sections][indexPath.section].datas[indexPath.row].jumpAction(self.navigationController);
 }
 
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    UITableViewHeaderFooterView *view = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"header"];
+
+    if (!view) {
+        view = [[UITableViewHeaderFooterView alloc] initWithReuseIdentifier:@"header"];
+    }
+
+    view.textLabel.text = [BaseRegister sections][section].title;
+
+    view.detailTextLabel.text = [BaseRegister sections][section].details;
+
+    return view;
+}
+
 @end

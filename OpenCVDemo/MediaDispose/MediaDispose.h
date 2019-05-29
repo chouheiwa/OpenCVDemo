@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)mediaDispose:(MediaDispose *)mediaDispose didFailed:(NSError *)error;
 
 @end
-
+#pragma mark - 将连串的图片生成视频，并将视频输出至指定目录
 @interface MediaDispose : NSObject
 
 @property (nonatomic, copy) NSString *outputPath;
