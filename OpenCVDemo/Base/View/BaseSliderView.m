@@ -6,9 +6,9 @@
 //  Copyright © 2019 chouheiwa. All rights reserved.
 //
 
-#import "HandPaintSliderView.h"
+#import "BaseSliderView.h"
 
-@interface HandPaintSliderView()<UITextFieldDelegate>
+@interface BaseSliderView()<UITextFieldDelegate>
 
 @property (nonatomic, strong) UILabel *titleLabel;
 
@@ -20,7 +20,7 @@
 
 @end
 
-@implementation HandPaintSliderView
+@implementation BaseSliderView
 
 - (NSDecimalNumberHandler *)handler {
     if (!_handler) {
@@ -30,18 +30,20 @@
     return _handler;
 }
 
-- (instancetype)initWithFrame:(CGRect)frame {
-    if (self = [super initWithFrame:frame]) {
+- (instancetype)initWithCoder:(NSCoder *)coder {
+    if (self = [super initWithCoder:coder]) {
         [self setupView];
     }
 
     return self;
 }
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
+- (instancetype)initWithFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
+        [self setupView];
+    }
 
-    [self setupView];
+    return self;
 }
 
 - (void)setTitle:(NSString *)title {

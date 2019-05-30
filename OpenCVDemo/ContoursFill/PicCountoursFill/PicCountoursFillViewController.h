@@ -1,17 +1,18 @@
 //
-//  Pic2CartoonViewController.h
+//  PicCountoursFillViewController.h
 //  OpenCVDemo
 //
-//  Created by Di on 2019/5/29.
+//  Created by Di on 2019/5/30.
 //  Copyright © 2019 chouheiwa. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import "BasePictureViewController.h"
+
 #import "BaseActionProtocol.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Pic2CartoonViewController : BasePictureViewController <BaseActionProtocol>
+@interface PicCountoursFillViewController : BasePictureViewController<BaseActionProtocol>
 
 @end
 

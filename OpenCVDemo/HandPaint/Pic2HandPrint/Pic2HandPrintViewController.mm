@@ -10,21 +10,16 @@
 #import "BaseAction.h"
 
 #import "HandPaintHelper.h"
-#import "HandPaintSliderView.h"
+#import "Pic2HandPrintControlView.h"
+#import "BaseSliderView.h"
 
 @interface Pic2HandPrintViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
-@property (weak, nonatomic) IBOutlet UIImageView *originImageView;
-@property (weak, nonatomic) IBOutlet UIImageView *convertImageView;
-
-@property (weak, nonatomic) IBOutlet HandPaintSliderView *depthSliderView;
-@property (weak, nonatomic) IBOutlet HandPaintSliderView *ELSliderView;
-
-@property (weak, nonatomic) IBOutlet HandPaintSliderView *AZSliderView;
-
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageHeightLayout;
+@property (nonatomic, strong) Pic2HandPrintControlView *controlView;
 
 @property (nonatomic, strong) HandPaintHelper *helper;
+
+@property (nonatomic, strong) UIImage *showImage;
 
 @end
 
@@ -34,57 +29,35 @@
     [super viewDidLoad];
 
     self.title = @"图片转手绘画";
+
+    self.controlView = [Pic2HandPrintControlView createFromXib];
+
+    [self addArrangedSubview:self.controlView];
     // Do any additional setup after loading the view from its nib.
     _helper = [[HandPaintHelper alloc] init];
 
-    [self.originImageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(changeImage)]];
-
     __weak typeof(self) weakSelf = self;
 
-    [self setupSliderView:self.depthSliderView maxValue:10 minValue:0.1 currentValue:3 precision:1 title:@"景深" changeBlock:^(CGFloat value) {
+    [_controlView valueDidChange:^(CGFloat depth, CGFloat elevation, CGFloat azimuth) {
         __strong typeof(weakSelf) self = weakSelf;
 
-        self.convertImageView.image = [self.helper processImage:self.originImageView.image depth:value elevation:self.ELSliderView.value azimuth:self.AZSliderView.value];
+        UIImage *convertImage = [self.helper processImage:self.showImage depth:depth elevation:elevation azimuth:azimuth];
+
+        [self changeOriginImage:self.showImage convertImage:convertImage];
     }];
 
-    [self setupSliderView:self.ELSliderView maxValue:1.5 minValue:-0.5 currentValue:0.45 precision:2 title:@"光源仰角" changeBlock:^(CGFloat value) {
-        __strong typeof(weakSelf) self = weakSelf;
-
-        self.convertImageView.image = [self.helper processImage:self.originImageView.image depth:self.depthSliderView.value elevation:value azimuth:self.AZSliderView.value];
-    }];
-
-    [self setupSliderView:self.AZSliderView maxValue:2 minValue:0 currentValue:0.25 precision:2 title:@"光源倾角" changeBlock:^(CGFloat value) {
-        __strong typeof(weakSelf) self = weakSelf;
-
-        self.convertImageView.image = [self.helper processImage:self.originImageView.image depth:self.depthSliderView.value elevation:value azimuth:self.AZSliderView.value];
-    }];
-
-    [self changeOriginImage:[UIImage imageNamed:@"handPaint.jpg"]];
+    self.showImage = [UIImage imageNamed:@"handPaint.jpg"];
 }
 
-- (void)setupSliderView:(HandPaintSliderView *)view maxValue:(CGFloat)maxValue minValue:(CGFloat)minValue currentValue:(CGFloat)currentValue precision:(short)precision title:(NSString *)title changeBlock:(void(^)(CGFloat value))block {
-    view.precision = precision;
+- (void)setShowImage:(UIImage *)showImage {
+    _showImage = showImage;
 
-    view.maxValue = maxValue;
+    UIImage *convertImage = [self.helper processImage:showImage depth:self.controlView.depth elevation:self.controlView.elevation azimuth:self.controlView.azimuth];
 
-    view.minValue = minValue;
-
-    view.value = currentValue;
-
-    view.title = title;
-
-    view.valueChangeBlock = block;
+    [self changeOriginImage:showImage convertImage:convertImage];
 }
 
-- (void)changeOriginImage:(UIImage *)image {
-    self.originImageView.image = image;
-
-    self.convertImageView.image = [_helper processImage:self.originImageView.image depth:self.depthSliderView.value elevation:self.ELSliderView.value azimuth:self.AZSliderView.value];
-
-    [self resizeImageView];
-}
-
-- (void)changeImage {
+- (void)needChangeImage {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"更换图片" message:@"请选择想要更换的图片类型" preferredStyle:(UIAlertControllerStyleActionSheet)];
 
     [alert addAction:[UIAlertAction actionWithTitle:@"相册" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
@@ -113,21 +86,9 @@
     //获取图片
     UIImage *image = info[UIImagePickerControllerOriginalImage];
 
-    [self changeOriginImage:image];
+    self.showImage = image;
 
     [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (void)resizeImageView {
-    UIImage *image = self.originImageView.image;
-
-    CGSize size = image.size;
-
-    CGFloat width = [UIScreen mainScreen].bounds.size.width;
-
-    CGFloat height = width / size.width * size.height;
-
-    self.imageHeightLayout.constant = height;
 }
 
 + (nonnull BaseAction *)confirmAction {

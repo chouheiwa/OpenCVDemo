@@ -18,7 +18,9 @@
 
     section.title = @"轮廓提取";
 
-    section.details = @"暂时用于测试";
+    section.details = @"暂时用于测试轮廓提取相关功能";
+
+    
 
     return section;
 }

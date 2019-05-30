@@ -11,7 +11,7 @@
 		0236DA3322926E5F006D6A2A /* Pic2HandPrintViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0236DA3122926E5F006D6A2A /* Pic2HandPrintViewController.mm */; };
 		0236DA3422926E5F006D6A2A /* Pic2HandPrintViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0236DA3222926E5F006D6A2A /* Pic2HandPrintViewController.xib */; };
 		0236DA3622926F75006D6A2A /* handPaint.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0236DA3522926F74006D6A2A /* handPaint.jpg */; };
-		0236DA3A22928EFB006D6A2A /* HandPaintSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0236DA3922928EFB006D6A2A /* HandPaintSliderView.m */; };
+		0236DA3A22928EFB006D6A2A /* BaseSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0236DA3922928EFB006D6A2A /* BaseSliderView.m */; };
 		0236DA65229B8F98006D6A2A /* SketchControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 0236DA64229B8F98006D6A2A /* SketchControl.m */; };
 		0236DA68229BB212006D6A2A /* HandPaintControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 0236DA67229BB212006D6A2A /* HandPaintControl.m */; };
 		0236DA6B229BB3AF006D6A2A /* CharControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 0236DA6A229BB3AF006D6A2A /* CharControl.m */; };
@@ -19,9 +19,13 @@
 		0236DA73229BB726006D6A2A /* BaseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0236DA71229BB726006D6A2A /* BaseTableViewCell.xib */; };
 		0236DA7A229E23F9006D6A2A /* CartoonControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 0236DA79229E23F9006D6A2A /* CartoonControl.m */; };
 		0236DA7F229E27BE006D6A2A /* Pic2CartoonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0236DA7D229E27BE006D6A2A /* Pic2CartoonViewController.m */; };
-		0236DA80229E27BE006D6A2A /* Pic2CartoonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0236DA7E229E27BE006D6A2A /* Pic2CartoonViewController.xib */; };
 		0236DA83229E27D4006D6A2A /* CartoonHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0236DA82229E27D4006D6A2A /* CartoonHelper.mm */; };
 		0236DA8C229FBA15006D6A2A /* CountoursFillControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 0236DA8B229FBA15006D6A2A /* CountoursFillControl.m */; };
+		0236DA91229FBE62006D6A2A /* PicCountoursFillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0236DA8F229FBE61006D6A2A /* PicCountoursFillViewController.m */; };
+		0236DA96229FBEC0006D6A2A /* BasePictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0236DA94229FBEC0006D6A2A /* BasePictureViewController.m */; };
+		0236DA97229FBEC0006D6A2A /* BasePictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0236DA95229FBEC0006D6A2A /* BasePictureViewController.xib */; };
+		0236DA9A229FD2F7006D6A2A /* Pic2HandPrintControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0236DA99229FD2F7006D6A2A /* Pic2HandPrintControlView.m */; };
+		0236DA9C229FD30C006D6A2A /* Pic2HandPrintControlView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0236DA9B229FD30C006D6A2A /* Pic2HandPrintControlView.xib */; };
 		023E7605228AB81A002D0EB0 /* Video2SketchViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 023E7603228AB81A002D0EB0 /* Video2SketchViewController.mm */; };
 		023E7606228AB81A002D0EB0 /* Video2SketchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 023E7604228AB81A002D0EB0 /* Video2SketchViewController.xib */; };
 		023E7608228AB8E4002D0EB0 /* cxh.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 023E7607228AB8E4002D0EB0 /* cxh.mp4 */; };
@@ -71,8 +75,8 @@
 		0236DA3122926E5F006D6A2A /* Pic2HandPrintViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Pic2HandPrintViewController.mm; sourceTree = "<group>"; };
 		0236DA3222926E5F006D6A2A /* Pic2HandPrintViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Pic2HandPrintViewController.xib; sourceTree = "<group>"; };
 		0236DA3522926F74006D6A2A /* handPaint.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = handPaint.jpg; sourceTree = "<group>"; };
-		0236DA3822928EFB006D6A2A /* HandPaintSliderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HandPaintSliderView.h; sourceTree = "<group>"; };
-		0236DA3922928EFB006D6A2A /* HandPaintSliderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HandPaintSliderView.m; sourceTree = "<group>"; };
+		0236DA3822928EFB006D6A2A /* BaseSliderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseSliderView.h; sourceTree = "<group>"; };
+		0236DA3922928EFB006D6A2A /* BaseSliderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseSliderView.m; sourceTree = "<group>"; };
 		0236DA62229B8A19006D6A2A /* BaseSectionProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseSectionProtocol.h; sourceTree = "<group>"; };
 		0236DA63229B8F98006D6A2A /* SketchControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SketchControl.h; sourceTree = "<group>"; };
 		0236DA64229B8F98006D6A2A /* SketchControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SketchControl.m; sourceTree = "<group>"; };
@@ -87,12 +91,19 @@
 		0236DA79229E23F9006D6A2A /* CartoonControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CartoonControl.m; sourceTree = "<group>"; };
 		0236DA7C229E27BE006D6A2A /* Pic2CartoonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Pic2CartoonViewController.h; sourceTree = "<group>"; };
 		0236DA7D229E27BE006D6A2A /* Pic2CartoonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Pic2CartoonViewController.m; sourceTree = "<group>"; };
-		0236DA7E229E27BE006D6A2A /* Pic2CartoonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Pic2CartoonViewController.xib; sourceTree = "<group>"; };
 		0236DA81229E27D4006D6A2A /* CartoonHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CartoonHelper.h; sourceTree = "<group>"; };
 		0236DA82229E27D4006D6A2A /* CartoonHelper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CartoonHelper.mm; sourceTree = "<group>"; };
 		0236DA86229FB2F4006D6A2A /* CartoonHelper+ImageProcess.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CartoonHelper+ImageProcess.h"; sourceTree = "<group>"; };
 		0236DA8A229FBA15006D6A2A /* CountoursFillControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountoursFillControl.h; sourceTree = "<group>"; };
 		0236DA8B229FBA15006D6A2A /* CountoursFillControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountoursFillControl.m; sourceTree = "<group>"; };
+		0236DA8E229FBE61006D6A2A /* PicCountoursFillViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PicCountoursFillViewController.h; sourceTree = "<group>"; };
+		0236DA8F229FBE61006D6A2A /* PicCountoursFillViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PicCountoursFillViewController.m; sourceTree = "<group>"; };
+		0236DA93229FBEC0006D6A2A /* BasePictureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasePictureViewController.h; sourceTree = "<group>"; };
+		0236DA94229FBEC0006D6A2A /* BasePictureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasePictureViewController.m; sourceTree = "<group>"; };
+		0236DA95229FBEC0006D6A2A /* BasePictureViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasePictureViewController.xib; sourceTree = "<group>"; };
+		0236DA98229FD2F7006D6A2A /* Pic2HandPrintControlView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Pic2HandPrintControlView.h; sourceTree = "<group>"; };
+		0236DA99229FD2F7006D6A2A /* Pic2HandPrintControlView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Pic2HandPrintControlView.m; sourceTree = "<group>"; };
+		0236DA9B229FD30C006D6A2A /* Pic2HandPrintControlView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Pic2HandPrintControlView.xib; sourceTree = "<group>"; };
 		023E7602228AB81A002D0EB0 /* Video2SketchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Video2SketchViewController.h; sourceTree = "<group>"; };
 		023E7603228AB81A002D0EB0 /* Video2SketchViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Video2SketchViewController.mm; sourceTree = "<group>"; };
 		023E7604228AB81A002D0EB0 /* Video2SketchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Video2SketchViewController.xib; sourceTree = "<group>"; };
@@ -179,8 +190,8 @@
 		0236DA2B2291A500006D6A2A /* HandPaint */ = {
 			isa = PBXGroup;
 			children = (
-				0236DA3722928EB0006D6A2A /* View */,
 				0236DA3522926F74006D6A2A /* handPaint.jpg */,
+				0236DA3722928EB0006D6A2A /* View */,
 				0236DA2F22926E1F006D6A2A /* Pic2HandPrint */,
 				0236DA2C229250B8006D6A2A /* HandPaintHelper.h */,
 				0236DA2D229250B8006D6A2A /* HandPaintHelper.mm */,
@@ -203,8 +214,9 @@
 		0236DA3722928EB0006D6A2A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0236DA3822928EFB006D6A2A /* HandPaintSliderView.h */,
-				0236DA3922928EFB006D6A2A /* HandPaintSliderView.m */,
+				0236DA98229FD2F7006D6A2A /* Pic2HandPrintControlView.h */,
+				0236DA99229FD2F7006D6A2A /* Pic2HandPrintControlView.m */,
+				0236DA9B229FD30C006D6A2A /* Pic2HandPrintControlView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -224,6 +236,9 @@
 			children = (
 				0244F3D32266C24500BA924F /* BasicViewController.h */,
 				0244F3D42266C24500BA924F /* BasicViewController.m */,
+				0236DA93229FBEC0006D6A2A /* BasePictureViewController.h */,
+				0236DA94229FBEC0006D6A2A /* BasePictureViewController.m */,
+				0236DA95229FBEC0006D6A2A /* BasePictureViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -231,6 +246,8 @@
 		0236DA6E229BB6F6006D6A2A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0236DA3822928EFB006D6A2A /* BaseSliderView.h */,
+				0236DA3922928EFB006D6A2A /* BaseSliderView.m */,
 				0236DA6F229BB726006D6A2A /* BaseTableViewCell.h */,
 				0236DA70229BB726006D6A2A /* BaseTableViewCell.m */,
 				0236DA71229BB726006D6A2A /* BaseTableViewCell.xib */,
@@ -256,7 +273,6 @@
 			children = (
 				0236DA7C229E27BE006D6A2A /* Pic2CartoonViewController.h */,
 				0236DA7D229E27BE006D6A2A /* Pic2CartoonViewController.m */,
-				0236DA7E229E27BE006D6A2A /* Pic2CartoonViewController.xib */,
 			);
 			path = Pic2CartoonViewController;
 			sourceTree = "<group>";
@@ -266,8 +282,18 @@
 			children = (
 				0236DA8A229FBA15006D6A2A /* CountoursFillControl.h */,
 				0236DA8B229FBA15006D6A2A /* CountoursFillControl.m */,
+				0236DA8D229FBE38006D6A2A /* PicCountoursFill */,
 			);
 			path = ContoursFill;
+			sourceTree = "<group>";
+		};
+		0236DA8D229FBE38006D6A2A /* PicCountoursFill */ = {
+			isa = PBXGroup;
+			children = (
+				0236DA8E229FBE61006D6A2A /* PicCountoursFillViewController.h */,
+				0236DA8F229FBE61006D6A2A /* PicCountoursFillViewController.m */,
+			);
+			path = PicCountoursFill;
 			sourceTree = "<group>";
 		};
 		023E75E8228AB21F002D0EB0 /* Model */ = {
@@ -532,8 +558,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0236DA80229E27BE006D6A2A /* Pic2CartoonViewController.xib in Resources */,
 				02C5AD172282C72100271E35 /* cxk.jpg in Resources */,
+				0236DA97229FBEC0006D6A2A /* BasePictureViewController.xib in Resources */,
 				02C5AD032282835C00271E35 /* Pic2SketchFlowViewController.xib in Resources */,
 				023E7608228AB8E4002D0EB0 /* cxh.mp4 in Resources */,
 				0279F885225F2E1700818F3F /* Camera2CharViewController.xib in Resources */,
@@ -541,6 +567,7 @@
 				026FBA542264952A008A98BE /* BadApple.mp4 in Resources */,
 				02C5AD1D2282C84400271E35 /* Camera2SketchViewController.xib in Resources */,
 				0279F8412253402F00818F3F /* LaunchScreen.storyboard in Resources */,
+				0236DA9C229FD30C006D6A2A /* Pic2HandPrintControlView.xib in Resources */,
 				0279F83E2253402F00818F3F /* Assets.xcassets in Resources */,
 				02F51E91226D536600C009CA /* StringFlowViewController.xib in Resources */,
 				0279F882225F1CE000818F3F /* Video2CharViewController.xib in Resources */,
@@ -565,6 +592,8 @@
 				02E93A29228443F600E77A24 /* BaseSection.m in Sources */,
 				0236DA2E229250B8006D6A2A /* HandPaintHelper.mm in Sources */,
 				0236DA7F229E27BE006D6A2A /* Pic2CartoonViewController.m in Sources */,
+				0236DA96229FBEC0006D6A2A /* BasePictureViewController.m in Sources */,
+				0236DA91229FBE62006D6A2A /* PicCountoursFillViewController.m in Sources */,
 				0279F8392253402E00818F3F /* Camera2CharViewController.mm in Sources */,
 				0244F3D52266C24500BA924F /* BasicViewController.m in Sources */,
 				0236DA65229B8F98006D6A2A /* SketchControl.m in Sources */,
@@ -583,7 +612,8 @@
 				0236DA7A229E23F9006D6A2A /* CartoonControl.m in Sources */,
 				0279F8442253402F00818F3F /* main.m in Sources */,
 				0236DA72229BB726006D6A2A /* BaseTableViewCell.m in Sources */,
-				0236DA3A22928EFB006D6A2A /* HandPaintSliderView.m in Sources */,
+				0236DA3A22928EFB006D6A2A /* BaseSliderView.m in Sources */,
+				0236DA9A229FD2F7006D6A2A /* Pic2HandPrintControlView.m in Sources */,
 				0244F3D2226578B300BA924F /* CVVideoModel.m in Sources */,
 				02C5AD0C22829D4F00271E35 /* Pic2SketchModel.mm in Sources */,
 				023E7613228BBABD002D0EB0 /* UIImage+ToPixelBufferRef.m in Sources */,

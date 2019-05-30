@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HandPaintSliderView : UIStackView
+@interface BaseSliderView : UIStackView
 
 @property (nonatomic, copy) NSString *title;
 
