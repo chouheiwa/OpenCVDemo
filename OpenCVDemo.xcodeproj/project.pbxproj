@@ -21,6 +21,7 @@
 		0236DA7F229E27BE006D6A2A /* Pic2CartoonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0236DA7D229E27BE006D6A2A /* Pic2CartoonViewController.m */; };
 		0236DA80229E27BE006D6A2A /* Pic2CartoonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0236DA7E229E27BE006D6A2A /* Pic2CartoonViewController.xib */; };
 		0236DA83229E27D4006D6A2A /* CartoonHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0236DA82229E27D4006D6A2A /* CartoonHelper.mm */; };
+		0236DA8C229FBA15006D6A2A /* CountoursFillControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 0236DA8B229FBA15006D6A2A /* CountoursFillControl.m */; };
 		023E7605228AB81A002D0EB0 /* Video2SketchViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 023E7603228AB81A002D0EB0 /* Video2SketchViewController.mm */; };
 		023E7606228AB81A002D0EB0 /* Video2SketchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 023E7604228AB81A002D0EB0 /* Video2SketchViewController.xib */; };
 		023E7608228AB8E4002D0EB0 /* cxh.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 023E7607228AB8E4002D0EB0 /* cxh.mp4 */; };
@@ -89,6 +90,9 @@
 		0236DA7E229E27BE006D6A2A /* Pic2CartoonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Pic2CartoonViewController.xib; sourceTree = "<group>"; };
 		0236DA81229E27D4006D6A2A /* CartoonHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CartoonHelper.h; sourceTree = "<group>"; };
 		0236DA82229E27D4006D6A2A /* CartoonHelper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CartoonHelper.mm; sourceTree = "<group>"; };
+		0236DA86229FB2F4006D6A2A /* CartoonHelper+ImageProcess.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CartoonHelper+ImageProcess.h"; sourceTree = "<group>"; };
+		0236DA8A229FBA15006D6A2A /* CountoursFillControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountoursFillControl.h; sourceTree = "<group>"; };
+		0236DA8B229FBA15006D6A2A /* CountoursFillControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountoursFillControl.m; sourceTree = "<group>"; };
 		023E7602228AB81A002D0EB0 /* Video2SketchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Video2SketchViewController.h; sourceTree = "<group>"; };
 		023E7603228AB81A002D0EB0 /* Video2SketchViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Video2SketchViewController.mm; sourceTree = "<group>"; };
 		023E7604228AB81A002D0EB0 /* Video2SketchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Video2SketchViewController.xib; sourceTree = "<group>"; };
@@ -242,6 +246,7 @@
 				0236DA79229E23F9006D6A2A /* CartoonControl.m */,
 				0236DA81229E27D4006D6A2A /* CartoonHelper.h */,
 				0236DA82229E27D4006D6A2A /* CartoonHelper.mm */,
+				0236DA86229FB2F4006D6A2A /* CartoonHelper+ImageProcess.h */,
 			);
 			path = Cartoon;
 			sourceTree = "<group>";
@@ -254,6 +259,15 @@
 				0236DA7E229E27BE006D6A2A /* Pic2CartoonViewController.xib */,
 			);
 			path = Pic2CartoonViewController;
+			sourceTree = "<group>";
+		};
+		0236DA89229FB9CB006D6A2A /* ContoursFill */ = {
+			isa = PBXGroup;
+			children = (
+				0236DA8A229FBA15006D6A2A /* CountoursFillControl.h */,
+				0236DA8B229FBA15006D6A2A /* CountoursFillControl.m */,
+			);
+			path = ContoursFill;
 			sourceTree = "<group>";
 		};
 		023E75E8228AB21F002D0EB0 /* Model */ = {
@@ -354,6 +368,7 @@
 				023E75FF228AB695002D0EB0 /* Sketch */,
 				0236DA2B2291A500006D6A2A /* HandPaint */,
 				0236DA77229E23C5006D6A2A /* Cartoon */,
+				0236DA89229FB9CB006D6A2A /* ContoursFill */,
 				0244F3CB2265746E00BA924F /* OpenCV */,
 				026FBA532264952A008A98BE /* BadApple.mp4 */,
 				0279F8342253402E00818F3F /* AppDelegate.h */,
@@ -559,6 +574,7 @@
 				0236DA6B229BB3AF006D6A2A /* CharControl.m in Sources */,
 				02ECED5922818A05003C4947 /* Pic2SketchViewController.m in Sources */,
 				0279F88C225F364300818F3F /* OpenCVHelper.mm in Sources */,
+				0236DA8C229FBA15006D6A2A /* CountoursFillControl.m in Sources */,
 				0244F3CE2265749D00BA924F /* CVAnimateStringModel.m in Sources */,
 				0236DA3322926E5F006D6A2A /* Pic2HandPrintViewController.mm in Sources */,
 				023E7605228AB81A002D0EB0 /* Video2SketchViewController.mm in Sources */,
