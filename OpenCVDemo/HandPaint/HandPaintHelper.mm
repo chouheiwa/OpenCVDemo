@@ -40,13 +40,10 @@ using namespace std;
 - (UIImage *)processImage:(UIImage *)image depth:(double)depth elevation:(double)elevation azimuth:(double)azimuth {
 
     do {
-        do {
-            if (_originImage == image) break;
-
-            _originImage = image;
-        } while (NO);
         // double 可能存在误差
-        if (fabs(_depth - depth) < 0.000001) break;
+        if (_originImage == image && (fabs(_depth - depth) < 0.000001)) break;
+
+        _originImage = image;
 
         _depth = depth;
 

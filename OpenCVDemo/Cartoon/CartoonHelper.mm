@@ -19,11 +19,7 @@ using namespace std;
 
 @implementation CartoonHelper
 
-- (UIImage *)processImage:(UIImage *)image {
-    Mat source;
-
-    UIImageToMat(image, source);
-
+- (UIImage *)processCVImage:(Mat)source {
     cvtColor(source, source, COLOR_BGRA2BGR);
 
     /** EDgES **/
@@ -71,6 +67,14 @@ using namespace std;
     UIImage *resultImage = MatToUIImage(result);
 
     return resultImage;
+}
+
+- (UIImage *)processImage:(UIImage *)image {
+    Mat source;
+
+    UIImageToMat(image, source);
+
+    return [self processCVImage:source];
 }
 
 @end

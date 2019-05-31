@@ -12,10 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Pic2HandPrintViewController">
             <connections>
-                <outlet property="AZSliderView" destination="vlK-LV-gLV" id="t3y-tp-RqO"/>
-                <outlet property="ELSliderView" destination="e5b-J0-ij0" id="bUr-R5-U8N"/>
                 <outlet property="convertImageView" destination="vgk-QR-T2w" id="ak4-gy-6bA"/>
-                <outlet property="depthSliderView" destination="jrA-WS-ORP" id="GY5-z8-TGp"/>
                 <outlet property="imageHeightLayout" destination="AqF-5x-zoy" id="RGM-VH-M3e"/>
                 <outlet property="originImageView" destination="wqS-uI-U6H" id="701-hc-lq3"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -68,35 +65,11 @@
                                 <constraint firstItem="vgk-QR-T2w" firstAttribute="height" secondItem="wqS-uI-U6H" secondAttribute="height" id="zDJ-Fc-GJ6"/>
                             </constraints>
                         </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wvF-e8-qGt">
-                            <rect key="frame" x="16" y="600" width="382" height="290.5"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="控制板" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJB-Zo-39q">
-                                    <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="jrA-WS-ORP" customClass="HandPaintSliderView">
-                                    <rect key="frame" x="0.0" y="20.5" width="382" height="50"/>
-                                </stackView>
-                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="e5b-J0-ij0" customClass="HandPaintSliderView">
-                                    <rect key="frame" x="0.0" y="70.5" width="382" height="110"/>
-                                </stackView>
-                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="vlK-LV-gLV" customClass="HandPaintSliderView">
-                                    <rect key="frame" x="0.0" y="180.5" width="382" height="110"/>
-                                </stackView>
-                            </subviews>
-                        </stackView>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="wvF-e8-qGt" firstAttribute="top" secondItem="8AJ-Nx-FdE" secondAttribute="bottom" constant="16" id="223-3d-UX9"/>
                         <constraint firstItem="8AJ-Nx-FdE" firstAttribute="top" secondItem="x5V-0X-jy1" secondAttribute="top" constant="16" id="7Ot-yX-XYM"/>
-                        <constraint firstAttribute="trailing" secondItem="wvF-e8-qGt" secondAttribute="trailing" constant="16" id="NBq-5b-KS4"/>
                         <constraint firstItem="8AJ-Nx-FdE" firstAttribute="leading" secondItem="x5V-0X-jy1" secondAttribute="leading" id="Tah-46-njq"/>
                         <constraint firstAttribute="trailing" secondItem="8AJ-Nx-FdE" secondAttribute="trailing" id="oL3-yH-jjz"/>
-                        <constraint firstItem="wvF-e8-qGt" firstAttribute="leading" secondItem="x5V-0X-jy1" secondAttribute="leading" constant="16" id="xGS-XK-i56"/>
-                        <constraint firstAttribute="bottom" secondItem="wvF-e8-qGt" secondAttribute="bottom" constant="16" id="yzK-qS-ZKU"/>
                     </constraints>
                 </scrollView>
             </subviews>

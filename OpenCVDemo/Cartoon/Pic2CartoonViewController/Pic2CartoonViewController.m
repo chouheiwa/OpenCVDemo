@@ -12,9 +12,6 @@
 #import "CartoonHelper.h"
 
 @interface Pic2CartoonViewController ()
-@property (weak, nonatomic) IBOutlet UIImageView *originImageView;
-@property (weak, nonatomic) IBOutlet UIImageView *convertImageView;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *heightConstant;
 
 @end
 
@@ -25,7 +22,11 @@
 
     self.title = @"卡通画";
 
-    [self changeOriginImage:[UIImage imageNamed:@"handPaint.jpg"]];
+    CartoonHelper *helper = [[CartoonHelper alloc] init];
+
+    UIImage *image = [UIImage imageNamed:@"handPaint.jpg"];
+
+    [self changeOriginImage:[UIImage imageNamed:@"handPaint.jpg"] convertImage:[helper processImage:image]];
 }
 
 + (BaseAction *)confirmAction {
@@ -42,28 +43,6 @@
     };
 
     return action;
-}
-
-- (void)resizeImageView {
-    UIImage *image = self.originImageView.image;
-
-    CGSize size = image.size;
-
-    CGFloat width = [UIScreen mainScreen].bounds.size.width;
-
-    CGFloat height = width / size.width * size.height;
-
-    self.heightConstant.constant = height;
-}
-
-- (void)changeOriginImage:(UIImage *)image {
-    self.originImageView.image = image;
-
-    CartoonHelper *helper = [[CartoonHelper alloc] init];
-
-    self.convertImageView.image = [helper processImage:image];
-
-    [self resizeImageView];
 }
 
 @end

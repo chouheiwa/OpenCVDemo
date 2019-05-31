@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BasePictureViewController.h"
 #import "BaseActionProtocol.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Pic2CartoonViewController : UIViewController <BaseActionProtocol>
+@interface Pic2CartoonViewController : BasePictureViewController <BaseActionProtocol>
 
 @end
 
