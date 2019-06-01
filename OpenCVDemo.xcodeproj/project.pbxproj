@@ -25,7 +25,11 @@
 		0236DA9A229FD2F7006D6A2A /* Pic2HandPrintControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0236DA99229FD2F7006D6A2A /* Pic2HandPrintControlView.m */; };
 		0236DA9C229FD30C006D6A2A /* Pic2HandPrintControlView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0236DA9B229FD30C006D6A2A /* Pic2HandPrintControlView.xib */; };
 		0236DAA722A0F80E006D6A2A /* DebuggerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0236DAA522A0F80E006D6A2A /* DebuggerViewController.m */; };
-		0236DAA822A0F80E006D6A2A /* DebuggerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0236DAA622A0F80E006D6A2A /* DebuggerViewController.xib */; };
+		0236DAC222A1105A006D6A2A /* DebuggerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0236DAC022A1105A006D6A2A /* DebuggerTableViewCell.m */; };
+		0236DAC322A1105A006D6A2A /* DebuggerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0236DAC122A1105A006D6A2A /* DebuggerTableViewCell.xib */; };
+		0236DAC622A11133006D6A2A /* UIViewController+CurrentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0236DAC522A11133006D6A2A /* UIViewController+CurrentViewController.m */; };
+		0236DACA22A12135006D6A2A /* DebuggerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0236DAC922A12135006D6A2A /* DebuggerModel.m */; };
+		0236DACD22A1242C006D6A2A /* DebuggerControlModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0236DACC22A1242C006D6A2A /* DebuggerControlModel.m */; };
 		023E7605228AB81A002D0EB0 /* Video2SketchViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 023E7603228AB81A002D0EB0 /* Video2SketchViewController.mm */; };
 		023E7606228AB81A002D0EB0 /* Video2SketchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 023E7604228AB81A002D0EB0 /* Video2SketchViewController.xib */; };
 		023E7608228AB8E4002D0EB0 /* cxh.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 023E7607228AB8E4002D0EB0 /* cxh.mp4 */; };
@@ -102,7 +106,15 @@
 		0236DA9B229FD30C006D6A2A /* Pic2HandPrintControlView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Pic2HandPrintControlView.xib; sourceTree = "<group>"; };
 		0236DAA422A0F80E006D6A2A /* DebuggerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DebuggerViewController.h; sourceTree = "<group>"; };
 		0236DAA522A0F80E006D6A2A /* DebuggerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DebuggerViewController.m; sourceTree = "<group>"; };
-		0236DAA622A0F80E006D6A2A /* DebuggerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DebuggerViewController.xib; sourceTree = "<group>"; };
+		0236DABF22A1105A006D6A2A /* DebuggerTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DebuggerTableViewCell.h; sourceTree = "<group>"; };
+		0236DAC022A1105A006D6A2A /* DebuggerTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DebuggerTableViewCell.m; sourceTree = "<group>"; };
+		0236DAC122A1105A006D6A2A /* DebuggerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DebuggerTableViewCell.xib; sourceTree = "<group>"; };
+		0236DAC422A11133006D6A2A /* UIViewController+CurrentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CurrentViewController.h"; sourceTree = "<group>"; };
+		0236DAC522A11133006D6A2A /* UIViewController+CurrentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CurrentViewController.m"; sourceTree = "<group>"; };
+		0236DAC822A12135006D6A2A /* DebuggerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DebuggerModel.h; sourceTree = "<group>"; };
+		0236DAC922A12135006D6A2A /* DebuggerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DebuggerModel.m; sourceTree = "<group>"; };
+		0236DACB22A1242C006D6A2A /* DebuggerControlModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DebuggerControlModel.h; sourceTree = "<group>"; };
+		0236DACC22A1242C006D6A2A /* DebuggerControlModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DebuggerControlModel.m; sourceTree = "<group>"; };
 		023E7602228AB81A002D0EB0 /* Video2SketchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Video2SketchViewController.h; sourceTree = "<group>"; };
 		023E7603228AB81A002D0EB0 /* Video2SketchViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Video2SketchViewController.mm; sourceTree = "<group>"; };
 		023E7604228AB81A002D0EB0 /* Video2SketchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Video2SketchViewController.xib; sourceTree = "<group>"; };
@@ -239,6 +251,8 @@
 				0236DA93229FBEC0006D6A2A /* BasePictureViewController.h */,
 				0236DA94229FBEC0006D6A2A /* BasePictureViewController.m */,
 				0236DA95229FBEC0006D6A2A /* BasePictureViewController.xib */,
+				0236DAC422A11133006D6A2A /* UIViewController+CurrentViewController.h */,
+				0236DAC522A11133006D6A2A /* UIViewController+CurrentViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -280,6 +294,7 @@
 		0236DAA222A0F7D4006D6A2A /* Debugger */ = {
 			isa = PBXGroup;
 			children = (
+				0236DAC722A11D57006D6A2A /* Model */,
 				0236DAA922A0F8E3006D6A2A /* View */,
 				0236DAA322A0F7EC006D6A2A /* Controller */,
 			);
@@ -291,7 +306,6 @@
 			children = (
 				0236DAA422A0F80E006D6A2A /* DebuggerViewController.h */,
 				0236DAA522A0F80E006D6A2A /* DebuggerViewController.m */,
-				0236DAA622A0F80E006D6A2A /* DebuggerViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -299,8 +313,22 @@
 		0236DAA922A0F8E3006D6A2A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0236DABF22A1105A006D6A2A /* DebuggerTableViewCell.h */,
+				0236DAC022A1105A006D6A2A /* DebuggerTableViewCell.m */,
+				0236DAC122A1105A006D6A2A /* DebuggerTableViewCell.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		0236DAC722A11D57006D6A2A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0236DAC822A12135006D6A2A /* DebuggerModel.h */,
+				0236DAC922A12135006D6A2A /* DebuggerModel.m */,
+				0236DACB22A1242C006D6A2A /* DebuggerControlModel.h */,
+				0236DACC22A1242C006D6A2A /* DebuggerControlModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		023E75E8228AB21F002D0EB0 /* Model */ = {
@@ -567,11 +595,11 @@
 				02C5AD172282C72100271E35 /* cxk.jpg in Resources */,
 				0236DA97229FBEC0006D6A2A /* BasePictureViewController.xib in Resources */,
 				02C5AD032282835C00271E35 /* Pic2SketchFlowViewController.xib in Resources */,
+				0236DAC322A1105A006D6A2A /* DebuggerTableViewCell.xib in Resources */,
 				023E7608228AB8E4002D0EB0 /* cxh.mp4 in Resources */,
 				0279F885225F2E1700818F3F /* Camera2CharViewController.xib in Resources */,
 				0236DA73229BB726006D6A2A /* BaseTableViewCell.xib in Resources */,
 				026FBA542264952A008A98BE /* BadApple.mp4 in Resources */,
-				0236DAA822A0F80E006D6A2A /* DebuggerViewController.xib in Resources */,
 				02C5AD1D2282C84400271E35 /* Camera2SketchViewController.xib in Resources */,
 				0279F8412253402F00818F3F /* LaunchScreen.storyboard in Resources */,
 				0236DA9C229FD30C006D6A2A /* Pic2HandPrintControlView.xib in Resources */,
@@ -599,6 +627,7 @@
 				02E93A29228443F600E77A24 /* BaseSection.m in Sources */,
 				0236DA2E229250B8006D6A2A /* HandPaintHelper.mm in Sources */,
 				0236DA7F229E27BE006D6A2A /* Pic2CartoonViewController.m in Sources */,
+				0236DAC622A11133006D6A2A /* UIViewController+CurrentViewController.m in Sources */,
 				0236DA96229FBEC0006D6A2A /* BasePictureViewController.m in Sources */,
 				0279F8392253402E00818F3F /* Camera2CharViewController.mm in Sources */,
 				0244F3D52266C24500BA924F /* BasicViewController.m in Sources */,
@@ -607,6 +636,7 @@
 				023E7610228BBA84002D0EB0 /* MediaDispose.m in Sources */,
 				02F51E9A226D590400C009CA /* StringFinalStepViewController.mm in Sources */,
 				0236DA6B229BB3AF006D6A2A /* CharControl.m in Sources */,
+				0236DACD22A1242C006D6A2A /* DebuggerControlModel.m in Sources */,
 				02ECED5922818A05003C4947 /* Pic2SketchViewController.m in Sources */,
 				0236DAA722A0F80E006D6A2A /* DebuggerViewController.m in Sources */,
 				0279F88C225F364300818F3F /* OpenCVHelper.mm in Sources */,
@@ -615,6 +645,7 @@
 				023E7605228AB81A002D0EB0 /* Video2SketchViewController.mm in Sources */,
 				0236DA83229E27D4006D6A2A /* CartoonHelper.mm in Sources */,
 				02C5AD1C2282C84400271E35 /* Camera2SketchViewController.mm in Sources */,
+				0236DAC222A1105A006D6A2A /* DebuggerTableViewCell.m in Sources */,
 				0236DA7A229E23F9006D6A2A /* CartoonControl.m in Sources */,
 				0279F8442253402F00818F3F /* main.m in Sources */,
 				0236DA72229BB726006D6A2A /* BaseTableViewCell.m in Sources */,
@@ -623,6 +654,7 @@
 				0244F3D2226578B300BA924F /* CVVideoModel.m in Sources */,
 				02C5AD0C22829D4F00271E35 /* Pic2SketchModel.mm in Sources */,
 				023E7613228BBABD002D0EB0 /* UIImage+ToPixelBufferRef.m in Sources */,
+				0236DACA22A12135006D6A2A /* DebuggerModel.m in Sources */,
 				0236DA68229BB212006D6A2A /* HandPaintControl.m in Sources */,
 				02C5AD022282835C00271E35 /* Pic2SketchFlowViewController.m in Sources */,
 				02F51E90226D536600C009CA /* StringFlowViewController.mm in Sources */,

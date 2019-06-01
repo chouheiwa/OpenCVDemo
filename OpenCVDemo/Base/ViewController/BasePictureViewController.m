@@ -57,4 +57,10 @@
     [self resizeImageView];
 }
 
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+    if (self.processHelper && [self.processHelper respondsToSelector:@selector(debugProcess)]) {
+        [self.processHelper debugProcess];
+    }
+}
+
 @end

@@ -10,7 +10,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DebuggerViewController : UIViewController
+/**
+ 这个类是为了方便调试OpenCV效果中的过程显示相关参数对应修改的image过程的
+ */
+@interface DebuggerViewController : UITableViewController
+
++ (DebuggerViewController *)shareInstance;
+
+- (void)show;
 
 @end
 

@@ -10,7 +10,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol PictureProcessHelperProtocol <NSObject>
+@optional
+- (void)debugProcess;
+
+@end
+
 @interface BasePictureViewController : UIViewController
+
+@property (nonatomic, strong) id<PictureProcessHelperProtocol> processHelper;
 
 - (void)addArrangedSubview:(UIView *)subview;
 
