@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ConntousFillHelper : NSObject
+@interface ContousFillHelper : NSObject
 
 - (UIImage *)processImage:(UIImage *)image;
 

@@ -9,6 +9,9 @@
 #import "PicCountoursFillViewController.h"
 #import "BaseAction.h"
 
+
+#import "ContousFillHelper.h"
+
 @interface PicCountoursFillViewController ()
 
 @end
@@ -18,6 +21,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+
+    ContousFillHelper *helper = [[ContousFillHelper alloc] init];
+
+    UIImage *image = [UIImage imageNamed:@"opencv_logo.png"];
+
+    [self changeOriginImage:image convertImage:[helper processImage:image]];
 }
 
 + (BaseAction *)confirmAction {
