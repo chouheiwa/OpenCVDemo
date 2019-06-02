@@ -12,13 +12,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DebuggerModel : NSObject
 
+@property (nonatomic, copy) NSString *identifier;
+
 @property (nonatomic, copy) NSString *title;
 
 @property (nonatomic, strong) UIImage *contentImage;
 
-@property (nonatomic, copy) NSArray *controlsArray;
-
 @property (nonatomic, copy) void (^valueChangeBlock) (NSArray <NSNumber *>*changeArray);
+
+- (void)addControlTitle:(NSString *)title value:(CGFloat)value maxValue:(CGFloat)maxValue minValue:(CGFloat)minValue precision:(short)precision;
 
 @end
 

@@ -22,6 +22,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign) short precision;
 
+- (instancetype)initWithTitle:(NSString *)title value:(CGFloat)value maxValue:(CGFloat)maxValue minValue:(CGFloat)minValue precision:(short)precision
+
 @end
 
 NS_ASSUME_NONNULL_END

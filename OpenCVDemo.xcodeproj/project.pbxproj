@@ -131,6 +131,7 @@
 		0244F3D1226578B300BA924F /* CVVideoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CVVideoModel.m; sourceTree = "<group>"; };
 		0244F3D32266C24500BA924F /* BasicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicViewController.h; sourceTree = "<group>"; };
 		0244F3D42266C24500BA924F /* BasicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicViewController.m; sourceTree = "<group>"; };
+		02581C8822A40E2D00DC5A7D /* DebuggerModel+TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DebuggerModel+TableViewCell.h"; sourceTree = "<group>"; };
 		0258EA77228A4C500065AFE9 /* OpenCVDnn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCVDnn.h; sourceTree = "<group>"; };
 		0258EA78228A4C500065AFE9 /* OpenCVDnn.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVDnn.mm; sourceTree = "<group>"; };
 		026FBA532264952A008A98BE /* BadApple.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = BadApple.mp4; sourceTree = "<group>"; };
@@ -324,6 +325,7 @@
 			isa = PBXGroup;
 			children = (
 				0236DAC822A12135006D6A2A /* DebuggerModel.h */,
+				02581C8822A40E2D00DC5A7D /* DebuggerModel+TableViewCell.h */,
 				0236DAC922A12135006D6A2A /* DebuggerModel.m */,
 				0236DACB22A1242C006D6A2A /* DebuggerControlModel.h */,
 				0236DACC22A1242C006D6A2A /* DebuggerControlModel.m */,
