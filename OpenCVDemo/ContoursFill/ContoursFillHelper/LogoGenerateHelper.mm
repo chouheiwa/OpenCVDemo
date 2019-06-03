@@ -12,26 +12,26 @@
 #import <opencv2/videoio/cap_ios.h>
 #import <opencv2/core/core.hpp>
 #import <opencv2/highgui/highgui.hpp>
-#import "ContousFillHelper.h"
+#import "LogoGenerateHelper.h"
 
 using namespace cv;
 using namespace std;
 
 
-@implementation ContousFillHelper
+@implementation LogoGenerateHelper
 
 - (UIImage *)processImage:(UIImage *)image {
     Mat source;
 
     UIImageToMat(image, source);
 
-    Mat dstImage = Mat::zeros(source.rows, source.cols, CV_8UC3);
+    Mat dstImage = source.clone();
 
     Mat gray;
 
     cvtColor(source, gray, CV_RGB2GRAY);
 
-    threshold(gray, gray, 127, 255, cv::THRESH_BINARY);
+    threshold(gray, gray, 220, 255, cv::THRESH_BINARY);
 
     vector<vector<cv::Point>> contours;
 
@@ -39,11 +39,33 @@ using namespace std;
 
     findContours(gray, contours, hierarchy, cv::RETR_CCOMP, cv::CHAIN_APPROX_SIMPLE);
 
+    NSArray *colors = @[
+                       [UIColor redColor],
+                       [UIColor yellowColor],
+                       [UIColor blueColor],
+                       [UIColor lightGrayColor],
+                       [UIColor orangeColor],
+                       [UIColor cyanColor],
+                       [UIColor brownColor]
+                       ];
+
+    int current = 0;
+
     for (int index = 0; index>=0; index = hierarchy[index][0]) {
-        Scalar color(rand()&255, rand()&255, rand()&255);
+        UIColor *aColor = colors[current%colors.count];
+
+        current ++;
+
+        CGFloat red, green, blue, alpha;
+
+        [aColor getRed:&red green:&green blue:&blue alpha:&alpha];
+
+        Scalar color(red * 255, green * 255, blue * 255, 255);
 
         drawContours(dstImage, contours, index, color,  cv::FILLED, 8, hierarchy);
     }
+
+//    multiply(dstImage, source, dstImage);
 
     return MatToUIImage(dstImage);
 }

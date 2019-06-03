@@ -27,8 +27,8 @@
 		0236DAA722A0F80E006D6A2A /* DebuggerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0236DAA522A0F80E006D6A2A /* DebuggerViewController.m */; };
 		0236DAA822A0F80E006D6A2A /* DebuggerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0236DAA622A0F80E006D6A2A /* DebuggerViewController.xib */; };
 		0236DABC22A0FF2C006D6A2A /* CountoursFillControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 0236DAB422A0FF2C006D6A2A /* CountoursFillControl.m */; };
-		0236DABD22A0FF2C006D6A2A /* PicCountoursFillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0236DAB622A0FF2C006D6A2A /* PicCountoursFillViewController.m */; };
-		0236DABE22A0FF2C006D6A2A /* ContousFillHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0236DABA22A0FF2C006D6A2A /* ContousFillHelper.mm */; };
+		0236DABD22A0FF2C006D6A2A /* LogoGenerateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0236DAB622A0FF2C006D6A2A /* LogoGenerateViewController.m */; };
+		0236DABE22A0FF2C006D6A2A /* LogoGenerateHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0236DABA22A0FF2C006D6A2A /* LogoGenerateHelper.mm */; };
 		023E7605228AB81A002D0EB0 /* Video2SketchViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 023E7603228AB81A002D0EB0 /* Video2SketchViewController.mm */; };
 		023E7606228AB81A002D0EB0 /* Video2SketchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 023E7604228AB81A002D0EB0 /* Video2SketchViewController.xib */; };
 		023E7608228AB8E4002D0EB0 /* cxh.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 023E7607228AB8E4002D0EB0 /* cxh.mp4 */; };
@@ -108,10 +108,10 @@
 		0236DAA522A0F80E006D6A2A /* DebuggerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DebuggerViewController.m; sourceTree = "<group>"; };
 		0236DAA622A0F80E006D6A2A /* DebuggerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DebuggerViewController.xib; sourceTree = "<group>"; };
 		0236DAB422A0FF2C006D6A2A /* CountoursFillControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountoursFillControl.m; sourceTree = "<group>"; };
-		0236DAB622A0FF2C006D6A2A /* PicCountoursFillViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicCountoursFillViewController.m; sourceTree = "<group>"; };
-		0236DAB722A0FF2C006D6A2A /* PicCountoursFillViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicCountoursFillViewController.h; sourceTree = "<group>"; };
-		0236DAB922A0FF2C006D6A2A /* ContousFillHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContousFillHelper.h; sourceTree = "<group>"; };
-		0236DABA22A0FF2C006D6A2A /* ContousFillHelper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ContousFillHelper.mm; sourceTree = "<group>"; };
+		0236DAB622A0FF2C006D6A2A /* LogoGenerateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoGenerateViewController.m; sourceTree = "<group>"; };
+		0236DAB722A0FF2C006D6A2A /* LogoGenerateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoGenerateViewController.h; sourceTree = "<group>"; };
+		0236DAB922A0FF2C006D6A2A /* LogoGenerateHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoGenerateHelper.h; sourceTree = "<group>"; };
+		0236DABA22A0FF2C006D6A2A /* LogoGenerateHelper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LogoGenerateHelper.mm; sourceTree = "<group>"; };
 		0236DABB22A0FF2C006D6A2A /* CountoursFillControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountoursFillControl.h; sourceTree = "<group>"; };
 		023E7602228AB81A002D0EB0 /* Video2SketchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Video2SketchViewController.h; sourceTree = "<group>"; };
 		023E7603228AB81A002D0EB0 /* Video2SketchViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Video2SketchViewController.mm; sourceTree = "<group>"; };
@@ -320,26 +320,26 @@
 				02581C8B22A41D9400DC5A7D /* opencv_logo.png */,
 				0236DABB22A0FF2C006D6A2A /* CountoursFillControl.h */,
 				0236DAB422A0FF2C006D6A2A /* CountoursFillControl.m */,
-				0236DAB522A0FF2C006D6A2A /* PicCountoursFill */,
+				0236DAB522A0FF2C006D6A2A /* LogoGenerate */,
 				0236DAB822A0FF2C006D6A2A /* ContoursFillHelper */,
 			);
 			path = ContoursFill;
 			sourceTree = "<group>";
 		};
-		0236DAB522A0FF2C006D6A2A /* PicCountoursFill */ = {
+		0236DAB522A0FF2C006D6A2A /* LogoGenerate */ = {
 			isa = PBXGroup;
 			children = (
-				0236DAB722A0FF2C006D6A2A /* PicCountoursFillViewController.h */,
-				0236DAB622A0FF2C006D6A2A /* PicCountoursFillViewController.m */,
+				0236DAB722A0FF2C006D6A2A /* LogoGenerateViewController.h */,
+				0236DAB622A0FF2C006D6A2A /* LogoGenerateViewController.m */,
 			);
-			path = PicCountoursFill;
+			path = LogoGenerate;
 			sourceTree = "<group>";
 		};
 		0236DAB822A0FF2C006D6A2A /* ContoursFillHelper */ = {
 			isa = PBXGroup;
 			children = (
-				0236DAB922A0FF2C006D6A2A /* ContousFillHelper.h */,
-				0236DABA22A0FF2C006D6A2A /* ContousFillHelper.mm */,
+				0236DAB922A0FF2C006D6A2A /* LogoGenerateHelper.h */,
+				0236DABA22A0FF2C006D6A2A /* LogoGenerateHelper.mm */,
 			);
 			path = ContoursFillHelper;
 			sourceTree = "<group>";
@@ -665,10 +665,10 @@
 				0236DA3A22928EFB006D6A2A /* BaseSliderView.m in Sources */,
 				0236DA9A229FD2F7006D6A2A /* Pic2HandPrintControlView.m in Sources */,
 				0244F3D2226578B300BA924F /* CVVideoModel.m in Sources */,
-				0236DABE22A0FF2C006D6A2A /* ContousFillHelper.mm in Sources */,
+				0236DABE22A0FF2C006D6A2A /* LogoGenerateHelper.mm in Sources */,
 				02C5AD0C22829D4F00271E35 /* Pic2SketchModel.mm in Sources */,
 				023E7613228BBABD002D0EB0 /* UIImage+ToPixelBufferRef.m in Sources */,
-				0236DABD22A0FF2C006D6A2A /* PicCountoursFillViewController.m in Sources */,
+				0236DABD22A0FF2C006D6A2A /* LogoGenerateViewController.m in Sources */,
 				0236DA68229BB212006D6A2A /* HandPaintControl.m in Sources */,
 				02C5AD022282835C00271E35 /* Pic2SketchFlowViewController.m in Sources */,
 				02F51E90226D536600C009CA /* StringFlowViewController.mm in Sources */,

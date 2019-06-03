@@ -9,7 +9,7 @@
 #import "CountoursFillControl.h"
 #import "BaseSection.h"
 
-#import "PicCountoursFillViewController.h"
+#import "LogoGenerateViewController.h"
 
 @implementation CountoursFillControl
 
@@ -22,7 +22,7 @@
 
     section.details = @"暂时用于测试轮廓提取相关功能";
 
-    [section addAction:[PicCountoursFillViewController confirmAction]];
+    [section addAction:[LogoGenerateViewController confirmAction]];
 
     return section;
 }
