@@ -26,6 +26,9 @@
 		0236DA9C229FD30C006D6A2A /* Pic2HandPrintControlView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0236DA9B229FD30C006D6A2A /* Pic2HandPrintControlView.xib */; };
 		0236DAA722A0F80E006D6A2A /* DebuggerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0236DAA522A0F80E006D6A2A /* DebuggerViewController.m */; };
 		0236DAA822A0F80E006D6A2A /* DebuggerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0236DAA622A0F80E006D6A2A /* DebuggerViewController.xib */; };
+		0236DABC22A0FF2C006D6A2A /* CountoursFillControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 0236DAB422A0FF2C006D6A2A /* CountoursFillControl.m */; };
+		0236DABD22A0FF2C006D6A2A /* LogoGenerateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0236DAB622A0FF2C006D6A2A /* LogoGenerateViewController.m */; };
+		0236DABE22A0FF2C006D6A2A /* LogoGenerateHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0236DABA22A0FF2C006D6A2A /* LogoGenerateHelper.mm */; };
 		023E7605228AB81A002D0EB0 /* Video2SketchViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 023E7603228AB81A002D0EB0 /* Video2SketchViewController.mm */; };
 		023E7606228AB81A002D0EB0 /* Video2SketchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 023E7604228AB81A002D0EB0 /* Video2SketchViewController.xib */; };
 		023E7608228AB8E4002D0EB0 /* cxh.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 023E7607228AB8E4002D0EB0 /* cxh.mp4 */; };
@@ -36,6 +39,7 @@
 		0244F3CF2265751B00BA924F /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0279F84A2253403800818F3F /* opencv2.framework */; };
 		0244F3D2226578B300BA924F /* CVVideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0244F3D1226578B300BA924F /* CVVideoModel.m */; };
 		0244F3D52266C24500BA924F /* BasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0244F3D42266C24500BA924F /* BasicViewController.m */; };
+		02581C8C22A41D9400DC5A7D /* opencv_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 02581C8B22A41D9400DC5A7D /* opencv_logo.png */; };
 		0258EA79228A4C500065AFE9 /* OpenCVDnn.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0258EA78228A4C500065AFE9 /* OpenCVDnn.mm */; };
 		026FBA542264952A008A98BE /* BadApple.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 026FBA532264952A008A98BE /* BadApple.mp4 */; };
 		0279F8362253402E00818F3F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0279F8352253402E00818F3F /* AppDelegate.m */; };
@@ -103,6 +107,12 @@
 		0236DAA422A0F80E006D6A2A /* DebuggerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DebuggerViewController.h; sourceTree = "<group>"; };
 		0236DAA522A0F80E006D6A2A /* DebuggerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DebuggerViewController.m; sourceTree = "<group>"; };
 		0236DAA622A0F80E006D6A2A /* DebuggerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DebuggerViewController.xib; sourceTree = "<group>"; };
+		0236DAB422A0FF2C006D6A2A /* CountoursFillControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountoursFillControl.m; sourceTree = "<group>"; };
+		0236DAB622A0FF2C006D6A2A /* LogoGenerateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoGenerateViewController.m; sourceTree = "<group>"; };
+		0236DAB722A0FF2C006D6A2A /* LogoGenerateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoGenerateViewController.h; sourceTree = "<group>"; };
+		0236DAB922A0FF2C006D6A2A /* LogoGenerateHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoGenerateHelper.h; sourceTree = "<group>"; };
+		0236DABA22A0FF2C006D6A2A /* LogoGenerateHelper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LogoGenerateHelper.mm; sourceTree = "<group>"; };
+		0236DABB22A0FF2C006D6A2A /* CountoursFillControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountoursFillControl.h; sourceTree = "<group>"; };
 		023E7602228AB81A002D0EB0 /* Video2SketchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Video2SketchViewController.h; sourceTree = "<group>"; };
 		023E7603228AB81A002D0EB0 /* Video2SketchViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Video2SketchViewController.mm; sourceTree = "<group>"; };
 		023E7604228AB81A002D0EB0 /* Video2SketchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Video2SketchViewController.xib; sourceTree = "<group>"; };
@@ -119,6 +129,7 @@
 		0244F3D1226578B300BA924F /* CVVideoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CVVideoModel.m; sourceTree = "<group>"; };
 		0244F3D32266C24500BA924F /* BasicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicViewController.h; sourceTree = "<group>"; };
 		0244F3D42266C24500BA924F /* BasicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicViewController.m; sourceTree = "<group>"; };
+		02581C8B22A41D9400DC5A7D /* opencv_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = opencv_logo.png; sourceTree = "<group>"; };
 		0258EA77228A4C500065AFE9 /* OpenCVDnn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCVDnn.h; sourceTree = "<group>"; };
 		0258EA78228A4C500065AFE9 /* OpenCVDnn.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVDnn.mm; sourceTree = "<group>"; };
 		026FBA532264952A008A98BE /* BadApple.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = BadApple.mp4; sourceTree = "<group>"; };
@@ -303,6 +314,36 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		0236DAB322A0FF2C006D6A2A /* ContoursFill */ = {
+			isa = PBXGroup;
+			children = (
+				02581C8B22A41D9400DC5A7D /* opencv_logo.png */,
+				0236DABB22A0FF2C006D6A2A /* CountoursFillControl.h */,
+				0236DAB422A0FF2C006D6A2A /* CountoursFillControl.m */,
+				0236DAB522A0FF2C006D6A2A /* LogoGenerate */,
+				0236DAB822A0FF2C006D6A2A /* ContoursFillHelper */,
+			);
+			path = ContoursFill;
+			sourceTree = "<group>";
+		};
+		0236DAB522A0FF2C006D6A2A /* LogoGenerate */ = {
+			isa = PBXGroup;
+			children = (
+				0236DAB722A0FF2C006D6A2A /* LogoGenerateViewController.h */,
+				0236DAB622A0FF2C006D6A2A /* LogoGenerateViewController.m */,
+			);
+			path = LogoGenerate;
+			sourceTree = "<group>";
+		};
+		0236DAB822A0FF2C006D6A2A /* ContoursFillHelper */ = {
+			isa = PBXGroup;
+			children = (
+				0236DAB922A0FF2C006D6A2A /* LogoGenerateHelper.h */,
+				0236DABA22A0FF2C006D6A2A /* LogoGenerateHelper.mm */,
+			);
+			path = ContoursFillHelper;
+			sourceTree = "<group>";
+		};
 		023E75E8228AB21F002D0EB0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -401,6 +442,7 @@
 				023E75FF228AB695002D0EB0 /* Sketch */,
 				0236DA2B2291A500006D6A2A /* HandPaint */,
 				0236DA77229E23C5006D6A2A /* Cartoon */,
+				0236DAB322A0FF2C006D6A2A /* ContoursFill */,
 				0244F3CB2265746E00BA924F /* OpenCV */,
 				026FBA532264952A008A98BE /* BadApple.mp4 */,
 				0279F8342253402E00818F3F /* AppDelegate.h */,
@@ -578,6 +620,7 @@
 				0279F83E2253402F00818F3F /* Assets.xcassets in Resources */,
 				02F51E91226D536600C009CA /* StringFlowViewController.xib in Resources */,
 				0279F882225F1CE000818F3F /* Video2CharViewController.xib in Resources */,
+				02581C8C22A41D9400DC5A7D /* opencv_logo.png in Resources */,
 				023E7606228AB81A002D0EB0 /* Video2SketchViewController.xib in Resources */,
 				0236DA3422926E5F006D6A2A /* Pic2HandPrintViewController.xib in Resources */,
 				0236DA3622926F75006D6A2A /* handPaint.jpg in Resources */,
@@ -608,6 +651,7 @@
 				02F51E9A226D590400C009CA /* StringFinalStepViewController.mm in Sources */,
 				0236DA6B229BB3AF006D6A2A /* CharControl.m in Sources */,
 				02ECED5922818A05003C4947 /* Pic2SketchViewController.m in Sources */,
+				0236DABC22A0FF2C006D6A2A /* CountoursFillControl.m in Sources */,
 				0236DAA722A0F80E006D6A2A /* DebuggerViewController.m in Sources */,
 				0279F88C225F364300818F3F /* OpenCVHelper.mm in Sources */,
 				0244F3CE2265749D00BA924F /* CVAnimateStringModel.m in Sources */,
@@ -621,8 +665,10 @@
 				0236DA3A22928EFB006D6A2A /* BaseSliderView.m in Sources */,
 				0236DA9A229FD2F7006D6A2A /* Pic2HandPrintControlView.m in Sources */,
 				0244F3D2226578B300BA924F /* CVVideoModel.m in Sources */,
+				0236DABE22A0FF2C006D6A2A /* LogoGenerateHelper.mm in Sources */,
 				02C5AD0C22829D4F00271E35 /* Pic2SketchModel.mm in Sources */,
 				023E7613228BBABD002D0EB0 /* UIImage+ToPixelBufferRef.m in Sources */,
+				0236DABD22A0FF2C006D6A2A /* LogoGenerateViewController.m in Sources */,
 				0236DA68229BB212006D6A2A /* HandPaintControl.m in Sources */,
 				02C5AD022282835C00271E35 /* Pic2SketchFlowViewController.m in Sources */,
 				02F51E90226D536600C009CA /* StringFlowViewController.mm in Sources */,
