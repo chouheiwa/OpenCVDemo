@@ -25,18 +25,27 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OpenCVDemo" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="jaQ-5p-ad9">
-                                <rect key="frame" x="16" y="277" width="382" height="43"/>
+                                <rect key="frame" x="16" y="337" width="382" height="43"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-1024" translatesAutoresizingMaskIntoConstraints="NO" id="J79-ZD-pjU">
+                                <rect key="frame" x="143" y="160" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="J79-ZD-pjU" secondAttribute="height" id="2B2-by-Qzw"/>
+                                    <constraint firstAttribute="height" constant="128" id="QOD-fa-rcT"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="jaQ-5p-ad9" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="78E-cL-nQs"/>
                             <constraint firstItem="af5-FP-5EQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="FbU-jG-glC"/>
+                            <constraint firstItem="J79-ZD-pjU" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="bottom" multiplier="1/4" id="KpT-yZ-ad7"/>
                             <constraint firstAttribute="trailing" secondItem="af5-FP-5EQ" secondAttribute="trailing" constant="16" id="h2j-cu-1Yl"/>
-                            <constraint firstItem="jaQ-5p-ad9" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="bottom" multiplier="1/3" id="oRH-CN-yLL"/>
+                            <constraint firstItem="J79-ZD-pjU" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="huR-z3-jlv"/>
+                            <constraint firstItem="jaQ-5p-ad9" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="bottom" multiplier="2/5" id="oRH-CN-yLL"/>
                             <constraint firstItem="jaQ-5p-ad9" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="16" id="py8-n4-9Xq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="af5-FP-5EQ" secondAttribute="bottom" constant="32" id="uZc-EA-ETM"/>
                         </constraints>
@@ -48,4 +57,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon-1024" width="1024" height="1024"/>
+    </resources>
 </document>

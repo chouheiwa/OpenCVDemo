@@ -20,12 +20,35 @@ using namespace std;
 
 @implementation LogoGenerateHelper
 
-- (UIImage *)processImage:(UIImage *)image {
-    Mat source;
+- (cv::Mat)cvMatFromUIImage:(UIImage *)image
+{
+    CGColorSpaceRef colorSpace = CGImageGetColorSpace(image.CGImage);
+    CGFloat cols = image.size.width;
+    CGFloat rows = image.size.height;
 
-    UIImageToMat(image, source);
+    cv::Mat cvMat(rows, cols, CV_8UC4); // 8 bits per component, 4 channels (color channels + alpha)
+
+    CGContextRef contextRef = CGBitmapContextCreate(cvMat.data,
+                                                    cols,
+                                                    rows,
+                                                    8,
+                                                    cvMat.step[0],
+                                                    colorSpace,
+                                                    kCGImageAlphaPremultipliedLast |
+                                                    kCGBitmapByteOrderDefault);
+
+    CGContextDrawImage(contextRef, CGRectMake(0, 0, cols, rows), image.CGImage);
+    CGContextRelease(contextRef);
+
+    return cvMat;
+}
+
+- (UIImage *)processImage:(UIImage *)image {
+    Mat source = [self cvMatFromUIImage:image];
 
     Mat dstImage = source.clone();
+
+//    return MatToUIImage(dstImage);
 
     Mat gray;
 
@@ -41,17 +64,13 @@ using namespace std;
 
     NSArray *colors = @[
                        [UIColor redColor],
-                       [UIColor yellowColor],
+                       [UIColor greenColor],
                        [UIColor blueColor],
-                       [UIColor lightGrayColor],
-                       [UIColor orangeColor],
-                       [UIColor cyanColor],
-                       [UIColor brownColor]
                        ];
 
     int current = 0;
 
-    for (int index = 0; index>=0; index = hierarchy[index][0]) {
+    for (int index = 0; index >= 0; index = hierarchy[index][0]) {
         UIColor *aColor = colors[current%colors.count];
 
         current ++;
@@ -64,8 +83,6 @@ using namespace std;
 
         drawContours(dstImage, contours, index, color,  cv::FILLED, 8, hierarchy);
     }
-
-//    multiply(dstImage, source, dstImage);
 
     return MatToUIImage(dstImage);
 }
